@@ -1,0 +1,65 @@
+.blind{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
+
+#footer .group-notice .link-all::after,
+.sc-widget .btn-mobile::after,
+.sc-widget .btn-mobile::before,
+.sc-widget .group-widget .btn-next::after,
+.sc-widget .group-widget .vibe-list .vibe-item .play::after,
+.sc-widget .group-widget .vibe-area .btn-refresh::after,
+.sc-widget .group-widget .vibe-area .vibe-title::before,
+.sc-recommend .group-shorts .btn-next::before,
+.sc-finance .up::before,
+.sc-finance .down::before,
+.sc-finance .stock-area .more::after,
+.sc-finance .index-area .up::before,
+.sc-finance .time-area .refresh::before,
+.sc-finance .group-head .dialog::before,
+.sc-weather .group-head .head-area .compare::before,
+.sc-login .link-login::before,
+.sc-news .group-issue .btn-all::after,
+#header .search-area .btn-keyborad::after,
+#header .search-area .btn-auto::after {
+    background-image: url(../images/sp-bg.png);
+    background-repeat: no-repeat;
+    background-size: 463px 442px;
+}
+
+#header .search-area .btn-auto::after,
+.sc-news .group-control [class*="btn-"]::before,
+#header .nav-area .icon::before,
+#header .nav-area .icon::after,
+#header .util-area [class*="btn-"]::after{
+    background-image: url(../images/sp3-bg.png);
+    background-repeat: no-repeat;
+    background-size: 468px 457px;
+}
+
+.sc-news .group-control [class*="btn_"]::after,
+.sc-recommend .group-shorts .btn-next::before,
+.sc-shopping .mypage-item [class*="ic-"]::after,
+.sc-shopping .group-control [class*="btn-"]::before{
+    background-image: url(../images/sp2-bg.png);
+    background-repeat: no-repeat;
+    background-size: 216px 190px; 
+}
+
+.sc-weather .forecast-item .icon::before,
+.sc-weather .group-weather .curr .icon::before{
+    background-image: url(../images/sp_weather.png);
+    background-repeat: no-repeat;
+    background-size: 641px 587px;
+}
+
+
+.sc-shopping .mypage-item [class*="icon-"]::before{
+    background-image: url(../images/sp4-bg.png);
+    background-repeat: no-repeat;
+    background-size: 233px 223px;
+}
