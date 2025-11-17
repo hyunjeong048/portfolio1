@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reaktor</title>
+    <link rel="icon" href="./asset/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./asset/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="content">
+                <div class="header-wrap">
+                    <h1 class="logo">
+                        <span class="blind">reaktor</span>
+                        <a href="">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_703_11496)">
+                            <path d="M2.38516 4.77033C3.70245 4.77033 4.77033 3.70245 4.77033 2.38516C4.77033 1.06787 3.70245 0 2.38516 0C1.06787 0 0 1.06787 0 2.38516C0 3.70245 1.06787 4.77033 2.38516 4.77033Z" fill="currentColor"></path>
+                            <path d="M10.0014 4.77033C11.3187 4.77033 12.3865 3.70245 12.3865 2.38516C12.3865 1.06787 11.3187 0 10.0014 0C8.68409 0 7.61621 1.06787 7.61621 2.38516C7.61621 3.70245 8.68409 4.77033 10.0014 4.77033Z" fill="currentColor"></path>
+                            <path d="M17.6147 4.77033C18.929 4.77033 19.9998 3.70138 19.9998 2.38516C19.9998 1.06895 18.9309 0 17.6147 0C16.2984 0 15.2295 1.06895 15.2295 2.38516C15.2295 3.70138 16.2984 4.77033 17.6147 4.77033Z" fill="currentColor"></path>
+                            <path d="M2.38516 7.61572C1.07085 7.61572 0 8.68467 0 10.0009C0 11.3171 1.06895 12.3861 2.38516 12.3861C3.70138 12.3861 4.77033 11.3171 4.77033 10.0009C4.77033 8.68467 3.70138 7.61572 2.38516 7.61572Z" fill="currentColor"></path>
+                            <path d="M10.0014 7.61572C8.68706 7.61572 7.61621 8.68467 7.61621 10.0009C7.61621 11.3171 8.68516 12.3861 10.0014 12.3861C11.3176 12.3861 12.3865 11.3171 12.3865 10.0009C12.3865 8.68467 11.3176 7.61572 10.0014 7.61572Z" fill="currentColor"></path>
+                            <path d="M17.6147 7.61572C16.3003 7.61572 15.2295 8.68467 15.2295 10.0009C15.2295 11.3171 16.2984 12.3861 17.6147 12.3861C18.9309 12.3861 19.9998 11.3171 19.9998 10.0009C19.9998 8.68467 18.9309 7.61572 17.6147 7.61572Z" fill="currentColor"></path>
+                            <path d="M2.38516 15.2297C1.07085 15.2297 0 16.2987 0 17.6149C0 18.9311 1.06895 20.0001 2.38516 20.0001C3.70138 20.0001 4.77033 18.9311 4.77033 17.6149C4.77033 16.2987 3.70138 15.2297 2.38516 15.2297Z" fill="currentColor"></path>
+                            <path d="M10.0014 15.2297C8.68706 15.2297 7.61621 16.2987 7.61621 17.6149C7.61621 18.9311 8.68516 20.0001 10.0014 20.0001C11.3176 20.0001 12.3865 18.9311 12.3865 17.6149C12.3865 16.2987 11.3176 15.2297 10.0014 15.2297Z" fill="currentColor"></path>
+                            <path d="M17.6147 15.2297C16.3003 15.2297 15.2295 16.2987 15.2295 17.6149C15.2295 18.9311 16.2984 20.0001 17.6147 20.0001C18.9309 20.0001 19.9998 18.9311 19.9998 17.6149C19.9998 16.2987 18.9309 15.2297 17.6147 15.2297Z" fill="currentColor"></path>
+                            <path d="M40.8582 17.3525L36.7897 12.3463H31.6237V17.3525H29.0312V2.39478H37.2081C41.8758 2.39478 43.8101 4.31013 43.8101 7.2602C43.8101 9.6739 42.454 11.5474 39.6808 12.1466L43.9889 17.3525H40.8582ZM31.6237 10.1532H37.6665C40.1202 10.1532 41.3356 9.07666 41.3356 7.38003C41.3356 5.68341 40.2191 4.58783 37.2062 4.58783H31.6218V10.1532H31.6237Z" fill="currentColor"></path>
+                            <path d="M56.5534 12.8046H47.5586C47.9181 14.6401 49.3142 15.7566 51.8268 15.7566C53.084 15.7566 55.0374 15.5569 56.2738 14.9786L56.095 16.894C54.7578 17.5122 52.6846 17.7518 51.5072 17.7518C47.3779 17.7518 45.0859 15.418 45.0859 11.8688C45.0859 8.31958 47.3988 5.96484 51.1097 5.96484C55.1592 5.96484 57.4511 8.51739 56.5553 12.8065L56.5534 12.8046ZM51.1078 7.75847C48.9129 7.75847 47.6765 9.11463 47.4787 11.1498H54.2196C54.4992 9.2744 53.4017 7.75847 51.1078 7.75847Z" fill="currentColor"></path>
+                            <path d="M66.9845 15.8764C65.3488 17.0538 63.2755 17.7518 61.44 17.7518C59.6046 17.7518 58.1895 16.9549 58.1895 15.1783C58.1895 12.8445 61.2004 11.3096 66.9255 11.3096V10.0333C66.9255 8.75705 65.8281 8.03807 63.9146 8.03807C62.6174 8.03807 60.3235 8.45652 58.7087 9.29532L58.8875 7.16123C60.4225 6.36427 62.8761 5.96484 64.2132 5.96484C67.8024 5.96484 69.3982 7.57968 69.3982 10.0542V17.3543H66.9255L66.9845 15.8783V15.8764ZM60.8409 14.8398C60.8409 15.7775 61.6379 16.1161 62.6764 16.1161C63.8937 16.1161 65.5884 15.5569 66.9236 14.621V12.7666C63.4334 12.7666 60.8409 13.3657 60.8409 14.8417V14.8398Z" fill="currentColor"></path>
+                            <path d="M75.8789 12.4261L74.4828 13.4837V17.3524H71.9893V2.17603H74.4828V10.9711L80.3259 6.36433H83.4567L77.7125 10.8912L84.1338 17.3524H80.9821L75.877 12.4261H75.8789Z" fill="currentColor"></path>
+                            <path d="M91.2357 17.7519C88.5633 17.7519 87.0075 16.2759 87.0075 13.6834V8.43759H84.1943V6.36245H87.0075V5.04624L89.4801 3.23169V6.36245H95.443V8.43759H89.4801V13.1642C89.4801 14.8189 90.4178 15.6768 92.1125 15.6768C93.2899 15.6768 94.6061 15.2184 95.443 14.779L95.2642 16.8541C94.2276 17.3334 92.7307 17.7519 91.2357 17.7519Z" fill="currentColor"></path>
+                            <path d="M102.923 17.7518C99.0148 17.7518 96.4014 15.418 96.4014 11.8688C96.4014 8.31958 99.0148 5.96484 102.923 5.96484C106.832 5.96484 109.465 8.29865 109.465 11.8688C109.465 15.4389 106.851 17.7518 102.923 17.7518ZM102.923 8.03807C100.491 8.03807 98.895 9.53308 98.895 11.8669C98.895 14.2007 100.491 15.6767 102.923 15.6767C105.356 15.6767 106.973 14.1817 106.973 11.8669C106.973 9.5521 105.377 8.03807 102.923 8.03807Z" fill="currentColor"></path>
+                            <path d="M111.52 6.36424H114.013L113.914 8.05896C115.63 6.6039 118.262 5.74607 120.178 6.08464L119.938 8.47741C117.983 7.93913 115.27 8.61626 114.015 9.59391V17.3524H111.521V6.36424H111.52Z" fill="currentColor"></path>
+                            </g>
+                            </svg>
+                        </a>
+                    </h1>
+                    <nav class="group-nav">
+                        <div class="menu-list">
+                            <a href="" class="link-menu">Projekty</a>
+                            <a href="" class="link-menu">O nás</a>
+                        </div>
+                        <div class="menu-list contect">
+                            <a href="" class="link-menu">Kontakt</a>
+                            <a href="" class="icon-go">
+                                <img src="./asset/images/link-go.svg" alt="">
+                                <div class="dot"></div>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div class="btn-menu">
+                        <div class="text">Menu</div>
+                        <div class="dot" role="button" aria-label="메뉴창 열기">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-close">
+                    <div class="text">Menu</div>
+                    <div class="dot open" role="button" aria-label="창 닫기">
+                        <img src="./asset/images/btn-close.svg" alt="">
+                    </div>
+                </div>
+                <div class="side-menu">
+                    <ul class="side-list">
+                        <li class="side-item">
+                            <a href="">
+                                Projekty
+                            </a>
+                        </li>
+                        <li class="side-item">
+                            <a href="">
+                                O nás
+                            </a>
+                        </li>
+                        <li class="side-item">
+                            <a href="">
+                                Kariéra
+                            </a>
+                        </li>
+                        <li class="side-item">
+                            <a href="">
+                                Kontakt
+                            </a>
+                        </li>
+                        <li class="side-item">
+                            <a href="" class="btn-link">
+                                <div class="text">Zhmotnit vlastní příběh</div>
+                                <div class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="대각선 화살표">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="sc-visual">
+                <div class="inner">
+                    <div class="group-head">
+                        <div class="head-area">
+                            <h1 class="headline">
+                                Stavíme <br> silné příběhy.
+                            </h1>
+                            <a href="" class="btn-link">
+                                <div class="text">Odhalit všechny projekty</div>
+                                <div class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="side-list">
+                        <li class="side-item">
+                            <div class="text show"><a href="">VŠE coworking</a></div>
+                            <div class="control show"></div>
+                        </li>
+                        <li class="side-item ">
+                            <div class="text"><a href="">Apartmány Lipno</a></div>
+                            <div class="control"></div>
+                        </li>
+                        <li class="side-item">
+                            <div class="text"><a href="">CNC & Active</a></div>
+                            <div class="control"></div>
+                        </li>
+                        <li class="side-item">
+                            <div class="text"><a href="">Liko-s Oasis Bubble</a></div>
+                            <div class="control"></div>
+                        </li>
+                        <li class="side-item">
+                            <div class="text"><a href="">INFINIT SEN</a></div>
+                            <div class="control"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper main-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./asset/images/visual1.jpg" alt="메인 비주얼 이미지">
+                            <div class="dimmed"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/images/visual2.jpg" alt="메인 비주얼 이미지">
+                            <div class="dimmed"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/images/visual3.jpg" alt="메인 비주얼 이미지">
+                            <div class="dimmed"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/images/visual4.jpg" alt="메인 비주얼 이미지">
+                            <div class="dimmed"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/images/visual5.jpg" alt="메인 비주얼 이미지">
+                            <div class="dimmed"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="group-bottom">
+                        <div class="text">Mezi prací</div>
+                        <div class="line"></div>
+                        <div class="text active">a domovem</div>
+                    </div>
+            </section>
+
+            <section class="sc-visual2">
+                <div class="content">
+                    <div class="sticky1">
+                        <div class="headline">Naše architektura zachycuje opravdový charakter staveb. </div>
+                        <div class="desc">Proto se naše stavby nepodobají. Zachycují pravdivé příběhy.</div>
+                        <div class="bottom-line"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sc-type">
+                <ul class="type-list top">
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Develoment</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Develoment</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Develoment</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Develoment</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                </ul>
+
+                <ul class="type-list bottom">
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Work space</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Work space</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Work space</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Work space</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover1.jpg" alt="">
+                                <img src="./asset/images/hover1-2.jpg" alt="">
+                                <img src="./asset/images/hover1-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Residential</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover2.jpg" alt="">
+                                <img src="./asset/images/hover2-1.jpg" alt="">
+                                <img src="./asset/images/hover2-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="type-item">
+                        <a href="">
+                            <div class="text">Public</div>
+                            <div class="sub">(16)</div>
+                            <div class="hover-img">
+                                <img src="./asset/images/hover3.jpg" alt="">
+                                <img src="./asset/images/hover3-1.jpg" alt="">
+                                <img src="./asset/images/hover3-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li> 
+                </ul>
+            </section>
+            
+            <section class="sc-residential">
+                <div class="sticky">
+                    <ul class="cont-list">
+                        <li class="cont-item">
+                            <div class="img-area is1">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">Rezidence Červený vrch</h3>
+                                        <p class="sub">Bydlení inspirované lokálními cihelnami</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is2">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">Radobýl</h3>
+                                        <p class="sub">Soubor staveb vycházející z principů kamenolomu</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is3">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">RD Radotín</h3>
+                                        <p class="sub">Bydlení v obklopení přírody a biotopu</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is4">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">INFINIT SEN</h3>
+                                        <p class="sub">Magická zahrada skrývající tajemná zákoutí a překvapení</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is5">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">Grill Castor</h3>
+                                        <p class="sub"> Otevřená kuchyně, odvážné materiály, poctivá restaurace</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is6">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">MO-ZA</h3>
+                                        <p class="sub">Modulární zastávky z recyklovaného betonu</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is7">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">VŠE coworking</h3>
+                                        <p class="sub"></p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is8">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">CNC & Active</h3>
+                                        <p class="sub">Mediaméba prorůstající všemi patry sjednucuje 70 různých brandů</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                        <li class="cont-item">
+                            <div class="img-area is9">
+                                <div class="dimmed"></div>
+                                <div class="outline">
+                                    <div class="text-area">
+                                        <h3 class="text">Allen & Overy</h3>
+                                        <p class="sub">Prostory inspirované listováním smlouvou a procházením knihovny plné zákonů</p>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group-bottom">
+                    <div class="head-area">
+                        <div class="title-wrap">
+                            <h2 class="title">Residential</h2>
+                            <h2 class="title">Public</h2>
+                            <h2 class="title">Work space</h2>
+                        </div>
+                        <a href="" class="btn-link">
+                            <div class="text">Zjistit více</div>
+                            <div class="icon-go">
+                                <img src="./asset/images/link-go.svg" alt="">
+                                <div class="dot"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sc-photo">
+                <div class="scroll-all">
+                    <div class="sticky is1">
+                        <div class="group-left">
+                            <div class="absol-con"></div>
+                            <div class="photo-area">
+                                <div class="photo-list">
+                                    <img src="./asset/images/photo1.jpg" alt="">
+                                </div>
+                                <div class="photo-list">
+                                    <img src="./asset/images/photo2.jpg" alt="">
+                                </div>
+                                <div class="photo-list">
+                                    <img src="./asset/images/photo3.jpg" alt="">
+                                </div>
+                                <div class="dimmed"></div>
+                            </div>
+                            <div class="desc-area">
+                                <div class="text-wrap">
+                                    <p class="text">Řešíme dopad stavby na lokalitu i život.</p>
+                                    <p class="text">Narušujeme zajeté stereotypy.</p>
+                                    <p class="text">Neděláme kompromisy v kvalitě materiálů a provedení.</p>
+                                </div>
+                                <div class="num-wrap">
+                                    <div class="num-box">
+                                        <div class="num">1</div>
+                                        <div class="num">2</div>
+                                        <div class="num">3</div>
+                                    </div>
+                                    <div class="num">/3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sticky">
+                        <div class="group-right">
+                            <ul class="circle-list">
+                                <li class="circle-item">
+                                    <div class="text">vazby</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">harmonie</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">kreativita</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">wellbeing</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">proveditelnost</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">příroda</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">historie</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">vazby</div>
+                                </li>
+                                <li class="circle-item">
+                                    <div class="text">odvaha</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sc-team">
+                <div class="sticky">
+                    <div class="group-team">
+                        <img src="./asset/images/team.webp" alt="">
+                        <div class="num-area">
+                            <div class="num-wrap">
+                                <div class="num">35</div>
+                                <div class="text">architektů <br> z přístavu</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="num-wrap">
+                                <div class="num">11 000</div>
+                                <div class="text">m2 kancelářských <br> ploch</div>
+                            </div>
+                            <div class="num-wrap">
+                                <div class="num">19 000</div>
+                                <div class="text">m2 kancelářských <br> ploch</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="num-wrap">
+                                <div class="num">40</div>
+                                <div class="text">rodinných <br> domů</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="num-wrap">
+                                <div class="num">33</div>
+                                <div class="text">veřejných <br> staveb</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="num-wrap">
+                                <div class="num">13</div>
+                                <div class="text">měst <br> v Česku</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-desc">
+                        <div class="content">
+                            <div class="top-line"></div>
+                            <div class="desc-wrap">
+                                <p>Pracujeme konceptuálně. Naše kreativní řešení vyvěrá z potřeb klienta, prostředí stavby, rozpočtu i nejlepšího funkčního řešení.</p>
+                                <a href="" class="btn-link">
+                                    <div class="text">Tady nás najdete všechny</div>
+                                    <div class="icon-go">
+                                        <img src="./asset/images/link-go.svg" alt="">
+                                        <div class="dot"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-link">
+                <div class="sm-content">
+                    <ul class="link-list">
+                        <li class="link-item">
+                            <div class="title">Napsali o nás</div>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">CZECH CRUNCH</span>
+                                <div href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">Forbes</span>
+                                <div href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">CZECH CRUNCH</span>
+                                <div href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="link-list last">
+                        <li class="link-item">
+                            <div class="title">Ocenění</div>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">Winner</span>
+                                <div class="flex">
+                                    <span class="sub">Red Dot <sup>23</sup></span>
+                                    <div class="icon-go">
+                                        <img src="./asset/images/link-go.svg" alt="">
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">Vítěz</span>
+                                <div class="flex">
+                                    <span class="sub">Spolkový dům Komařice <sup>23</sup></span>
+                                    <div class="icon-go">
+                                        <img src="./asset/images/link-go.svg" alt="">
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="link-item contect">
+                            <a href="">
+                                <span class="text">Vítěz</span>
+                                <div class="flex">
+                                    <span class="sub">Kanceláře roku  <sup>21</sup></span>
+                                    <div class="icon-go">
+                                        <img src="./asset/images/link-go.svg" alt="">
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="group-bottom">
+                        <div class="sticky2">
+                            <h2 class="title">
+                                Hledáme talenty reaktivní architektury
+                            </h2>
+                            <a href="" class="btn-link">
+                                <div class="text">Aktivovat kariéru</div>
+                                <div class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <h2 class="blind">푸터</h2>
+            <div class="footer-bg">
+                <div class="img">
+                    <img src="./asset/images/footer.webp" alt="">
+                    <div class="dimmed"></div>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="left">
+                    <div class="logo">
+                        <a href="">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_703_11496)">
+                            <path d="M2.38516 4.77033C3.70245 4.77033 4.77033 3.70245 4.77033 2.38516C4.77033 1.06787 3.70245 0 2.38516 0C1.06787 0 0 1.06787 0 2.38516C0 3.70245 1.06787 4.77033 2.38516 4.77033Z" fill="currentColor"></path>
+                            <path d="M10.0014 4.77033C11.3187 4.77033 12.3865 3.70245 12.3865 2.38516C12.3865 1.06787 11.3187 0 10.0014 0C8.68409 0 7.61621 1.06787 7.61621 2.38516C7.61621 3.70245 8.68409 4.77033 10.0014 4.77033Z" fill="currentColor"></path>
+                            <path d="M17.6147 4.77033C18.929 4.77033 19.9998 3.70138 19.9998 2.38516C19.9998 1.06895 18.9309 0 17.6147 0C16.2984 0 15.2295 1.06895 15.2295 2.38516C15.2295 3.70138 16.2984 4.77033 17.6147 4.77033Z" fill="currentColor"></path>
+                            <path d="M2.38516 7.61572C1.07085 7.61572 0 8.68467 0 10.0009C0 11.3171 1.06895 12.3861 2.38516 12.3861C3.70138 12.3861 4.77033 11.3171 4.77033 10.0009C4.77033 8.68467 3.70138 7.61572 2.38516 7.61572Z" fill="currentColor"></path>
+                            <path d="M10.0014 7.61572C8.68706 7.61572 7.61621 8.68467 7.61621 10.0009C7.61621 11.3171 8.68516 12.3861 10.0014 12.3861C11.3176 12.3861 12.3865 11.3171 12.3865 10.0009C12.3865 8.68467 11.3176 7.61572 10.0014 7.61572Z" fill="currentColor"></path>
+                            <path d="M17.6147 7.61572C16.3003 7.61572 15.2295 8.68467 15.2295 10.0009C15.2295 11.3171 16.2984 12.3861 17.6147 12.3861C18.9309 12.3861 19.9998 11.3171 19.9998 10.0009C19.9998 8.68467 18.9309 7.61572 17.6147 7.61572Z" fill="currentColor"></path>
+                            <path d="M2.38516 15.2297C1.07085 15.2297 0 16.2987 0 17.6149C0 18.9311 1.06895 20.0001 2.38516 20.0001C3.70138 20.0001 4.77033 18.9311 4.77033 17.6149C4.77033 16.2987 3.70138 15.2297 2.38516 15.2297Z" fill="currentColor"></path>
+                            <path d="M10.0014 15.2297C8.68706 15.2297 7.61621 16.2987 7.61621 17.6149C7.61621 18.9311 8.68516 20.0001 10.0014 20.0001C11.3176 20.0001 12.3865 18.9311 12.3865 17.6149C12.3865 16.2987 11.3176 15.2297 10.0014 15.2297Z" fill="currentColor"></path>
+                            <path d="M17.6147 15.2297C16.3003 15.2297 15.2295 16.2987 15.2295 17.6149C15.2295 18.9311 16.2984 20.0001 17.6147 20.0001C18.9309 20.0001 19.9998 18.9311 19.9998 17.6149C19.9998 16.2987 18.9309 15.2297 17.6147 15.2297Z" fill="currentColor"></path>
+                            <path d="M40.8582 17.3525L36.7897 12.3463H31.6237V17.3525H29.0312V2.39478H37.2081C41.8758 2.39478 43.8101 4.31013 43.8101 7.2602C43.8101 9.6739 42.454 11.5474 39.6808 12.1466L43.9889 17.3525H40.8582ZM31.6237 10.1532H37.6665C40.1202 10.1532 41.3356 9.07666 41.3356 7.38003C41.3356 5.68341 40.2191 4.58783 37.2062 4.58783H31.6218V10.1532H31.6237Z" fill="currentColor"></path>
+                            <path d="M56.5534 12.8046H47.5586C47.9181 14.6401 49.3142 15.7566 51.8268 15.7566C53.084 15.7566 55.0374 15.5569 56.2738 14.9786L56.095 16.894C54.7578 17.5122 52.6846 17.7518 51.5072 17.7518C47.3779 17.7518 45.0859 15.418 45.0859 11.8688C45.0859 8.31958 47.3988 5.96484 51.1097 5.96484C55.1592 5.96484 57.4511 8.51739 56.5553 12.8065L56.5534 12.8046ZM51.1078 7.75847C48.9129 7.75847 47.6765 9.11463 47.4787 11.1498H54.2196C54.4992 9.2744 53.4017 7.75847 51.1078 7.75847Z" fill="currentColor"></path>
+                            <path d="M66.9845 15.8764C65.3488 17.0538 63.2755 17.7518 61.44 17.7518C59.6046 17.7518 58.1895 16.9549 58.1895 15.1783C58.1895 12.8445 61.2004 11.3096 66.9255 11.3096V10.0333C66.9255 8.75705 65.8281 8.03807 63.9146 8.03807C62.6174 8.03807 60.3235 8.45652 58.7087 9.29532L58.8875 7.16123C60.4225 6.36427 62.8761 5.96484 64.2132 5.96484C67.8024 5.96484 69.3982 7.57968 69.3982 10.0542V17.3543H66.9255L66.9845 15.8783V15.8764ZM60.8409 14.8398C60.8409 15.7775 61.6379 16.1161 62.6764 16.1161C63.8937 16.1161 65.5884 15.5569 66.9236 14.621V12.7666C63.4334 12.7666 60.8409 13.3657 60.8409 14.8417V14.8398Z" fill="currentColor"></path>
+                            <path d="M75.8789 12.4261L74.4828 13.4837V17.3524H71.9893V2.17603H74.4828V10.9711L80.3259 6.36433H83.4567L77.7125 10.8912L84.1338 17.3524H80.9821L75.877 12.4261H75.8789Z" fill="currentColor"></path>
+                            <path d="M91.2357 17.7519C88.5633 17.7519 87.0075 16.2759 87.0075 13.6834V8.43759H84.1943V6.36245H87.0075V5.04624L89.4801 3.23169V6.36245H95.443V8.43759H89.4801V13.1642C89.4801 14.8189 90.4178 15.6768 92.1125 15.6768C93.2899 15.6768 94.6061 15.2184 95.443 14.779L95.2642 16.8541C94.2276 17.3334 92.7307 17.7519 91.2357 17.7519Z" fill="currentColor"></path>
+                            <path d="M102.923 17.7518C99.0148 17.7518 96.4014 15.418 96.4014 11.8688C96.4014 8.31958 99.0148 5.96484 102.923 5.96484C106.832 5.96484 109.465 8.29865 109.465 11.8688C109.465 15.4389 106.851 17.7518 102.923 17.7518ZM102.923 8.03807C100.491 8.03807 98.895 9.53308 98.895 11.8669C98.895 14.2007 100.491 15.6767 102.923 15.6767C105.356 15.6767 106.973 14.1817 106.973 11.8669C106.973 9.5521 105.377 8.03807 102.923 8.03807Z" fill="currentColor"></path>
+                            <path d="M111.52 6.36424H114.013L113.914 8.05896C115.63 6.6039 118.262 5.74607 120.178 6.08464L119.938 8.47741C117.983 7.93913 115.27 8.61626 114.015 9.59391V17.3524H111.521V6.36424H111.52Z" fill="currentColor"></path>
+                            </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="left-list">
+                        <li class="left-item">
+                            <div class="title">Řekněte nám svůj příběh. Postavíme mu kancelář nebo dům.</div>
+                        </li>
+                        <li class="left-item contect">
+                            <a href="">
+                                <span class="text">+420 728 685 599</span>
+                                <div href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="left-item contect">
+                            <a href="">
+                                <span class="text">info@studio-reaktor.cz</span>
+                                <div href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="left-item last">
+                            <a href="" class="web">
+                                <img src="./asset/images/web-logo.svg" alt="">
+                            </a>
+                            <div class="sns-area">
+                                <a href="">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.1749 17.0485L21.6837 13.8155H18.5006V11.7184C18.5006 10.8338 18.9445 9.97087 20.3701 9.97087H21.8182V7.21845C21.8182 7.21845 20.5046 7 19.2493 7C16.6267 7 14.9141 8.54877 14.9141 11.3515V13.8155H12V17.0485H14.9141V24.8646C15.4991 24.9541 16.0976 25 16.7074 25C17.3171 25 17.9156 24.9541 18.5006 24.8646V17.0485H21.1749Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.4259 9.17562C11.4259 10.3772 10.3844 11.3512 9.09965 11.3512C7.81492 11.3512 6.77344 10.3772 6.77344 9.17562C6.77344 7.97406 7.81492 7 9.09965 7C10.3844 7 11.4259 7.97406 11.4259 9.17562Z" fill="currentColor"></path>
+                                    <path d="M7.09155 12.9504H11.068V25H7.09155V12.9504Z" fill="currentColor"></path>
+                                    <path d="M17.4701 12.9504H13.4936V25H17.4701C17.4701 25 17.4701 21.2066 17.4701 18.8348C17.4701 17.4112 17.9561 15.9814 19.8957 15.9814C22.0876 15.9814 22.0744 17.8444 22.0642 19.2877C22.0508 21.1743 22.0827 23.0995 22.0827 25H26.0592V18.6405C26.0255 14.5798 24.9674 12.7087 21.4863 12.7087C19.419 12.7087 18.1375 13.6472 17.4701 14.4963V12.9504Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.7734 10.5C23.7734 11.3284 23.1019 12 22.2734 12C21.445 12 20.7734 11.3284 20.7734 10.5C20.7734 9.67157 21.445 9 22.2734 9C23.1019 9 23.7734 9.67157 23.7734 10.5Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7734 21C19.5349 21 21.7734 18.7614 21.7734 16C21.7734 13.2386 19.5349 11 16.7734 11C14.012 11 11.7734 13.2386 11.7734 16C11.7734 18.7614 14.012 21 16.7734 21ZM16.7734 19C18.4303 19 19.7734 17.6569 19.7734 16C19.7734 14.3431 18.4303 13 16.7734 13C15.1166 13 13.7734 14.3431 13.7734 16C13.7734 17.6569 15.1166 19 16.7734 19Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.77344 15.6C6.77344 12.2397 6.77344 10.5595 7.4274 9.27606C8.00264 8.14708 8.92052 7.2292 10.0495 6.65396C11.333 6 13.0131 6 16.3734 6H17.1734C20.5338 6 22.2139 6 23.4974 6.65396C24.6264 7.2292 25.5442 8.14708 26.1195 9.27606C26.7734 10.5595 26.7734 12.2397 26.7734 15.6V16.4C26.7734 19.7603 26.7734 21.4405 26.1195 22.7239C25.5442 23.8529 24.6264 24.7708 23.4974 25.346C22.2139 26 20.5338 26 17.1734 26H16.3734C13.0131 26 11.333 26 10.0495 25.346C8.92052 24.7708 8.00264 23.8529 7.4274 22.7239C6.77344 21.4405 6.77344 19.7603 6.77344 16.4V15.6ZM16.3734 8H17.1734C18.8866 8 20.0512 8.00156 20.9514 8.0751C21.8282 8.14674 22.2766 8.27659 22.5894 8.43597C23.342 8.81947 23.954 9.43139 24.3375 10.184C24.4968 10.4968 24.6267 10.9452 24.6983 11.8221C24.7719 12.7223 24.7734 13.8868 24.7734 15.6V16.4C24.7734 18.1132 24.7719 19.2777 24.6983 20.1779C24.6267 21.0548 24.4968 21.5032 24.3375 21.816C23.954 22.5686 23.342 23.1805 22.5894 23.564C22.2766 23.7234 21.8282 23.8533 20.9514 23.9249C20.0512 23.9984 18.8866 24 17.1734 24H16.3734C14.6603 24 13.4957 23.9984 12.5955 23.9249C11.7187 23.8533 11.2703 23.7234 10.9575 23.564C10.2048 23.1805 9.5929 22.5686 9.20941 21.816C9.05003 21.5032 8.92018 21.0548 8.84854 20.1779C8.77499 19.2777 8.77344 18.1132 8.77344 16.4V15.6C8.77344 13.8868 8.77499 12.7223 8.84854 11.8221C8.92018 10.9452 9.05003 10.4968 9.20941 10.184C9.5929 9.43139 10.2048 8.81947 10.9575 8.43597C11.2703 8.27659 11.7187 8.14674 12.5955 8.0751C13.4957 8.00156 14.6603 8 16.3734 8Z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="desc">
+                                Přístavní 1315/7, 170 00, Praha <br>
+                                IČ: 6072518, DIČ: CZ06072518
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="location-area">
+                        <div class="location contect">
+                            <a href="" class="icon-go">
+                                    <img src="./asset/images/link-go.svg" alt="">
+                                    <div class="dot"></div>
+                            </a>
+                            <p class="desc">N 50.1044375, E 14.4484375</p>
+                        </div>
+                        <h2 class="title">Praha</h2>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
