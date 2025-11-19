@@ -7,48 +7,25 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
-// $('#header .btn-menu').click(function(e){
-//       e.preventDefault();
-
-//       $('#header .side-menu').addClass('show');
-//       $(this).css('display', 'none');
-//       $('#header .btn-close').css('display', 'flex');
-//       $('#header .header-wrap').addClass('show');
-//       $('body').addClass('scroll-hide');
-// });
-
-// $('#header .btn-close').click(function(e){
-//     e.preventDefault();
-
-
-//       $('#header .side-menu').removeClass('show');
-//       $(this).css('display', 'none');
-//       $('#header .btn-menu').css('display', 'flex');
-//       $('#header .header-wrap').removeClass('show');
-//       $('body').removeClass('scroll-hide');
-// });
-
-
-// 메뉴 열 때 스크롤 비활성화
 $('#header .btn-menu').click(function(e){
-  e.preventDefault();
+      e.preventDefault();
 
-  lenis.stop(); // Lenis 스크롤 멈춤
-  $('#header .side-menu').addClass('show');
-  $(this).hide();
-  $('#header .btn-close').show();
-  $('#header .header-wrap').addClass('show');
+      $('#header .side-menu').addClass('show');
+      $(this).css('display', 'none');
+      $('#header .btn-close').css('display', 'flex');
+      $('#header .header-wrap').addClass('show');
+      $('body').addClass('scroll-hide');
 });
 
-// 메뉴 닫을 때 스크롤 재개
 $('#header .btn-close').click(function(e){
-  e.preventDefault();
+    e.preventDefault();
 
-  lenis.start(); // Lenis 스크롤 재개
-  $('#header .side-menu').removeClass('show');
-  $(this).hide();
-  $('#header .btn-menu').show();
-  $('#header .header-wrap').removeClass('show');
+
+      $('#header .side-menu').removeClass('show');
+      $(this).css('display', 'none');
+      $('#header .btn-menu').css('display', 'flex');
+      $('#header .header-wrap').removeClass('show');
+      $('body').removeClass('scroll-hide');
 });
 
 
@@ -56,7 +33,7 @@ ScrollTrigger.create({
    trigger: ".sc-visual2",
    start: "30% 0%",
    endTrigger: ".sc-link .group-bottom",
-   end: "80% 100%",
+   end: "90% 100%",
    // markers: true,
    toggleClass: {
       targets: "#header",
