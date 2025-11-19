@@ -87,12 +87,6 @@ var swiper2 = new Swiper(".sc-interview .main-slide2", {
     }
 });
 
-$('.sc-interview .group-control .btn.next').click(function(){
-    $('.sc-interview .group-control .btn.prev').addClass('on');
-})
-$('.sc-benefits .group-control .btn.next').click(function(){
-    $('.sc-benefits .group-control .btn.prev').addClass('on');
-})
 
 var swiper3 = new Swiper(".sc-benefits .main-slide3", {
     slidesPerView: 1,
