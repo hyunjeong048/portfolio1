@@ -1,4 +1,16 @@
 
+
+$('.lang-area .btn-select').click(function(){
+    $('.lang-area .lang').toggleClass('on');
+});
+
+$('.lang-area .lang button').click(function() {
+  $('.lang-area .lang button').prop('disabled', false);
+
+  $(this).prop('disabled', true);
+});
+
+
 var swiper = new Swiper(".sc-visual .main-slide", {
     navigation: {
       nextEl: ".btn.next",
@@ -35,7 +47,6 @@ var swiper = new Swiper(".sc-visual .main-slide", {
     }
   });
 
-
 var swiper = new Swiper('.sc-card .card-slide', {
   freeMode: true,
   loop: true,
@@ -55,47 +66,9 @@ var swiper = new Swiper('.sc-card .card-slide', {
     }
 });
 
-  $('.btn-select').on('click', function () {
-    const $list = $(this).siblings('.link-list');
-    const $icon = $(this).find('svg');
-
-    $list.toggleClass('on');
-
-    if ($list.hasClass('on')) {
-      $icon.css('transform', 'rotate(-180deg)');
-    } else {
-      $icon.css('transform', 'rotate(0deg)');
-    }
-  });
 
 
 
-
-$('.lang-area .btn-select').click(function(){
-    $('.lang-area .lang').toggleClass('on');
-});
-
-$('.lang-area .lang button').click(function() {
-  $('.lang-area .lang button').prop('disabled', false);
-
-  $(this).prop('disabled', true);
-});
-
-
-$('.btn-play').click(function() {
-  const video = $(this).closest('.video-area').find('video')[0];
-
-});
-
-$('.sc-service .group-video .btn-play').click(function() {
-
-    $('.sc-service video').get(0).currentTime = 0;
-    $('.sc-service video').get(0).play();
-
-
-    $(this).hide();
-    $(this).siblings('.btn-stop').show();
-});
 
 $('.sc-service .group-video .btn-control').click(function() {
   if($(this).hasClass('on')){
@@ -107,6 +80,18 @@ $('.sc-service .group-video .btn-control').click(function() {
     $(this).addClass('on')
     $('.sc-service video').get(0).pause();
   }
+});
+
+
+
+$('.sc-service .group-video .btn-play').click(function() {
+
+    $('.sc-service video').get(0).currentTime = 0;
+    $('.sc-service video').get(0).play();
+
+
+    $(this).hide();
+    // $(this).siblings('.btn-stop').show();
 });
 
 
@@ -170,3 +155,15 @@ $('.btn-header').click(function(e){
 })
 
 
+  $('#footer .btn-select').on('click', function () {
+    const $list = $(this).siblings('.link-list');
+    const $icon = $(this).find('svg');
+
+    $list.toggleClass('on');
+
+    if ($list.hasClass('on')) {
+      $icon.css('transform', 'rotate(-180deg)');
+    } else {
+      $icon.css('transform', 'rotate(0deg)');
+    }
+  });
