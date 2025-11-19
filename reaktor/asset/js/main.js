@@ -1,61 +1,39 @@
+
 const lenis = new Lenis();
 lenis.on('scroll', ScrollTrigger.update);
-
-let lenisActive = true; // Lenis 루프 활성 여부
-
 gsap.ticker.add((time) => {
-  if (lenisActive) {
-    lenis.raf(time * 1000); // lenisActive가 true일 때만 스크롤 처리
-  }
+  lenis.raf(time * 1000);
 });
-
 gsap.ticker.lagSmoothing(0);
 
-// $('#header .btn-menu').click(function(e){
-//       e.preventDefault();
 
-//       $('#header .side-menu').addClass('show');
-//       $(this).css('display', 'none');
-//       $('#header .btn-close').css('display', 'flex');
-//       $('#header .header-wrap').addClass('show');
-//       $('body').addClass('scroll-hide');
-// });
+$('#header .btn-menu').click(function(e){
+      e.preventDefault();
 
-// $('#header .btn-close').click(function(e){
-//     e.preventDefault();
-
-
-//       $('#header .side-menu').removeClass('show');
-//       $(this).css('display', 'none');
-//       $('#header .btn-menu').css('display', 'flex');
-//       $('#header .header-wrap').removeClass('show');
-//       $('body').removeClass('scroll-hide');
-// });
-$('#header .btn-menu').click(function(){
-   lenisActive = false;       // Lenis raf 루프 중지
-   lenis.stop();              // 💡 Lenis 스크롤 이벤트 처리 정지 (추가)
-  $('body').addClass('scroll-hide');
-  $('#header .side-menu').addClass('show');
-  $(this).hide();
-  $('#header .btn-close').show();
+      $('#header .side-menu').addClass('show');
+      $(this).css('display', 'none');
+      $('#header .btn-close').css('display', 'flex');
+      $('#header .header-wrap').addClass('show');
+      $('body').addClass('scroll-hide');
 });
 
-$('#header .btn-close').click(function(){
-   lenisActive = true;      
-   lenis.start();
-  $('body').removeClass('scroll-hide');
-  $('#header .side-menu').removeClass('show');
-  $(this).hide();
-  $('#header .btn-menu').show();
-});
+$('#header .btn-close').click(function(e){
+    e.preventDefault();
 
+
+      $('#header .side-menu').removeClass('show');
+      $(this).css('display', 'none');
+      $('#header .btn-menu').css('display', 'flex');
+      $('#header .header-wrap').removeClass('show');
+      $('body').removeClass('scroll-hide');
+});
 
 
 ScrollTrigger.create({
    trigger: ".sc-visual2",
    start: "30% 0%",
    endTrigger: ".sc-link .group-bottom",
-   end: "90% 100%",
+   end: "80% 100%",
    // markers: true,
    toggleClass: {
       targets: "#header",
