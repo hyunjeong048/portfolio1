@@ -29,45 +29,6 @@ $('.header-menu .down').click(function(){
 })
 
 
-let lastScrollTop = 0;
-let headerHeight = $('#header').outerHeight();
-
-$(window).on('scroll', function () {
-  let currentScroll = $(this).scrollTop();
-
-  if ($('.header-menu').hasClass('show')) {
-    lastScrollTop = currentScroll; 
-    return;
-  }
-
-  if (currentScroll > headerHeight) {
-    if (currentScroll < lastScrollTop) {
-      $('#header').addClass('show');
-    } else {
-      $('#header').removeClass('show');
-    }
-  } else {
-    $('#header').removeClass('show');
-  }
-
-  lastScrollTop = currentScroll;
-});
-
-
-
-$('.btn-header').click(function(e){
-    e.preventDefault();
-    if($('#header .header-menu').hasClass('show')){
-      $(this).removeClass('active');
-        $('#header .header-menu').removeClass('show');
-        $('body').removeClass('scroll-hide');
-    }else{
-      $(this).addClass('active');
-      $('#header .header-menu').addClass('show');
-      $('body').addClass('scroll-hide');
-    }
-})
-
 
 
 var swiper = new Swiper(".sc-visual .main-slide", {
