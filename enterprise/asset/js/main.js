@@ -5,7 +5,6 @@ $('#header .lang-area').click(function(){
 })
 
 
-
 const visual1 = gsap.timeline({
     scrollTrigger:{
         trigger:".sc-visual",
@@ -86,8 +85,6 @@ showcase1.to('.sc-showcase .showcase-text .text-cont',{
     opacity:0
 })
 
-// 이미지처리
-
 showcase1.to('.sc-showcase .showcase-img .img:nth-child(3)',{
     height: 0
 })
@@ -95,15 +92,12 @@ showcase1.to('.sc-showcase .showcase-img .img:nth-child(2)',{
     height: 0
 })
 
-
 showcase1.from('.sc-showcase .showcase-text .showcase-desc',{
     opacity:0
 },'c')
 showcase1.to('.sc-showcase .dimmed',{
     opacity: 1
 },'c')
-
-
 
 
 gsap.to('.sc-prove',{
@@ -282,9 +276,6 @@ ScrollTrigger.matchMedia({
 });
 
 
-
-
-
 // 2222
 ScrollTrigger.create({
     trigger:"#service2",
@@ -317,7 +308,6 @@ ScrollTrigger.create({
          $('#service3 .card-item.line').addClass('hide');
     }
 })
-
 
 
 // 3333
@@ -383,10 +373,6 @@ service3
 
 
 
-
-
-
-
 const service4 = gsap.timeline({
   scrollTrigger: {
     trigger: "#service4",
@@ -411,7 +397,6 @@ service4.from('#service4 .right p', {
   duration: 1,
   ease: "power2.out"
 }, 'a');
-
 
 
 
@@ -525,9 +510,9 @@ let lastScroll = 0;
 $(window).scroll(function(){
     curr = $(this).scrollTop();
     if(curr> lastScroll){
-        $('.scroll-top .top-img').addClass('hide');
+        $('.scroll-top').addClass('show');
     }else{
-        $('.scroll-top .top-img').removeClass('hide');
+        $('.scroll-top').removeClass('show');
     }
     lastScroll = curr;
 })
