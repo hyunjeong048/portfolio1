@@ -345,6 +345,8 @@
 #footer .group-addr .mark a{}
 
 .btn-top{
+    width: 34px;
+    height: 34px;
     position: fixed;
     bottom: 98px;
     left: 50%;
