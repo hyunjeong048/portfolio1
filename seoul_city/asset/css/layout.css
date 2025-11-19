@@ -345,7 +345,8 @@
 #footer .group-addr .mark a{}
 
 .btn-top{
-    
+    width: 34px;
+    height: 34px;
     position: fixed;
     bottom: 98px;
     left: 50%;
@@ -353,17 +354,11 @@
     opacity: 1;
     margin-left: 600px;
     transition: 1s;
-}
-.btn-top::before{
-    content: '';
     background-image: url(../images/btn-top.png);
     background-repeat: no-repeat;
     background-position: 0 0;
-    width: 34px;
-    height: 34px;
-    display: inline-block;
-
 }
+
 .btn-top.on{
     transform: translateY(0);
 }
