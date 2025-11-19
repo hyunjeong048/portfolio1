@@ -32,7 +32,7 @@ ScrollTrigger.create({
    trigger: ".sc-visual2",
    start: "30% 0%",
    endTrigger: ".sc-link .group-bottom",
-   end: "100% 90%",
+   end: "100% 100%",
    // markers: true,
    toggleClass: {
       targets: "#header",
