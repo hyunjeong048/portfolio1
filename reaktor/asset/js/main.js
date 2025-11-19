@@ -31,7 +31,7 @@ $('#header .btn-close').click(function(e){
 ScrollTrigger.create({
    trigger: ".sc-visual2",
    start: "30% 0%",
-   endTrigger: ".sc-link .group-bottom",
+   endTrigger: ".sc-link .group-bottom .sticky2",
    end: "100% 100%",
    // markers: true,
    toggleClass: {
