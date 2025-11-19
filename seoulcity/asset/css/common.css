@@ -1,0 +1,46 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+.scroll-hide{
+    overflow: hidden;
+}
+
+.inner{
+    width: 1152px;
+    margin: 0 auto;
+}
+.headline{
+    font-size: 24px;
+    line-height: 1.35em;
+    font-weight: 700;
+}
+
+.sc-category .category-item [class*="link-"]::before{
+    background-image: url(../images/sp-cate.png);
+    background-size: 315px 315px;
+    background-repeat: no-repeat;
+}
+
+.sc-visual .control .btn.prev::before,
+.sc-media .group-media .link-more,
+.sc-board .link-more,
+.group-top .logo a::before{
+    background-image: url(../images/sp-bg.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+.sc-slide .btn::before,
+.sc-visual .control .btn.next::before,
+.sc-visual .control .btn.autoplay.on::before,
+.sc-visual .control .btn.autoplay::before,
+.sc-visual .control .btn.prev::before{
+    background-image: url(../images/sp-bg3.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
