@@ -12,7 +12,7 @@ $('#header .btn-menu').click(function(e){
 
       $('#header .side-menu').addClass('show');
       $(this).css('display', 'none');
-      $('#header .btn-close').css('display', 'flex');
+      // $('#header .btn-close').css('display', 'flex');
       $('#header .header-wrap').addClass('show');
       $('body').addClass('scroll-hide');
 });
