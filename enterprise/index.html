@@ -51,6 +51,7 @@
                                     </svg>
                                 </span>
                             </button>
+                            <!-- [D] .lang-area 클릭시 .show 클래스 추가 -->
                             <ul class="lang-list">
                                 <li class="lang-item active"><a href="#none">KR</a></li>
                                 <li class="lang-item"><a href="#none">EN</a></li>
@@ -558,7 +559,7 @@
                 <p class="title">시작하는 도약.</p>
             </h2>
         </section>
-
+        <!-- [D] .sc-finance 영역에 스크롤 도달하면 .on 클래스 추가 -->
         <section class="sc-finance">
             <div class="sticky">
                 <div class="content">
@@ -678,6 +679,7 @@
                         <div class="icon"></div>
                         <div class="icon"></div>
                     </div>
+                    <!-- [D] .sc-finance 진행률이 0.5 이상이면 .next-text에 .on 클래스 추가 -->
                     <div class="next-text">
                         <div class="text">전통금융</div>
                         <div class="text">미래금융</div>
@@ -845,12 +847,10 @@
             <div class="join-list"><span class="join-item">JOIN <em>us</em></span></div>
         </div>
         </section>
-        <div class="scroll-top">
+        <!-- [D] .scroll-top 클릭 시 상단으로 이동  -->
+        <a href="#none" class="scroll-top">
             <span class="blind">화면 맨 위로 이동</span>
-            <div class="top-img">
-                <img src="./asset/images/scroll-top.svg" alt="위쪽 화살표">
-            </div>
-        </div>
+        </a>
     </main>
     <!-- [E]main -->
 
