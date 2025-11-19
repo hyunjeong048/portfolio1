@@ -14,6 +14,7 @@ $('#header .btn-menu').click(function(e){
       $(this).css('display', 'none');
       $('#header .btn-close').css('display', 'flex');
       $('#header .header-wrap').addClass('show');
+      $('body').addClass('scroll-hide');
 });
 
 $('#header .btn-close').click(function(e){
@@ -24,6 +25,7 @@ $('#header .btn-close').click(function(e){
       $(this).css('display', 'none');
       $('#header .btn-menu').css('display', 'flex');
       $('#header .header-wrap').removeClass('show');
+      $('body').removeClass('scroll-hide');
 });
 
 
