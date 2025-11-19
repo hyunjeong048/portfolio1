@@ -48,7 +48,7 @@ $('#header .btn-menu').click(function(e){
     if (typeof lenis !== 'undefined') {
         lenis.stop();
     }
-    // $('body').addClass('scroll-hide'); // 이 라인은 제거하거나 유지해도 무방하나, Lenis stop이 우선
+    $('body').addClass('scroll-hide'); 
 });
 
 // 햄버거 메뉴 닫기
@@ -65,7 +65,7 @@ $('#header .btn-close').click(function(e){
     if (typeof lenis !== 'undefined') {
         lenis.start();
     }
-    // $('body').removeClass('scroll-hide'); // 이 라인은 제거하거나 유지해도 무방하나, Lenis start가 우선
+    $('body').removeClass('scroll-hide'); // 
 });
 
 
