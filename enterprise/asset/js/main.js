@@ -510,9 +510,9 @@ let lastScroll = 0;
 $(window).scroll(function(){
     curr = $(this).scrollTop();
     if(curr> lastScroll){
-        $('.scroll-top').addClass('show');
+        $('.scroll-top').addClass('hide');
     }else{
-        $('.scroll-top').removeClass('show');
+        $('.scroll-top').removeClass('hide');
     }
     lastScroll = curr;
 })

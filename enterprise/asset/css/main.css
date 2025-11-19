@@ -1083,7 +1083,6 @@
     bottom: 40px;
     z-index: 50;    
     opacity: 0;
-    cursor: pointer;
     background-image: url(../images/scroll-top.svg);
     background-repeat: no-repeat;
 }
