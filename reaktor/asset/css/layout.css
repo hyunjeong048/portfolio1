@@ -370,7 +370,7 @@
         display: none;
     }
     #header .btn-menu{
-        display: flex;
+        display: block;
     }
     #footer{
         display: flex;
