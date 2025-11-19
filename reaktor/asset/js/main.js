@@ -27,45 +27,32 @@ gsap.ticker.lagSmoothing(0);
 //       $('#header .header-wrap').removeClass('show');
 //       $('body').removeClass('scroll-hide');
 // });
-// Lenis 초기화 (가정)
+
+// Lenis 인스턴스 생성 시
 const lenis = new Lenis({
-    // Lenis 설정...
+  // 기존 옵션
 });
 
-// ...
-
-// 햄버거 메뉴 열기
+// 메뉴 열 때 스크롤 비활성화
 $('#header .btn-menu').click(function(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    // 기존 UI 로직
-    $('#header .side-menu').addClass('show');
-    $(this).css('display', 'none');
-    $('#header .btn-close').css('display', 'flex');
-    $('#header .header-wrap').addClass('show');
-    
-    // 💡 Lenis 스크롤 정지 (가장 확실한 방법)
-    if (typeof lenis !== 'undefined') {
-        lenis.stop();
-    }
-    $('body').addClass('scroll-hide'); 
+  lenis.stop(); // Lenis 스크롤 멈춤
+  $('#header .side-menu').addClass('show');
+  $(this).hide();
+  $('#header .btn-close').show();
+  $('#header .header-wrap').addClass('show');
 });
 
-// 햄버거 메뉴 닫기
+// 메뉴 닫을 때 스크롤 재개
 $('#header .btn-close').click(function(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    // 기존 UI 로직
-    $('#header .side-menu').removeClass('show');
-    $(this).css('display', 'none');
-    $('#header .btn-menu').css('display', 'flex');
-    $('#header .header-wrap').removeClass('show');
-    
-    // 💡 Lenis 스크롤 다시 시작
-    if (typeof lenis !== 'undefined') {
-        lenis.start();
-    }
-    $('body').removeClass('scroll-hide'); // 
+  lenis.start(); // Lenis 스크롤 재개
+  $('#header .side-menu').removeClass('show');
+  $(this).hide();
+  $('#header .btn-menu').show();
+  $('#header .header-wrap').removeClass('show');
 });
 
 
