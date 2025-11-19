@@ -2,9 +2,7 @@
 @import './common.css';
 @import './reset.css';
 
-#wrap{
-}
-
+#wrap{}
 #header{
     position: fixed;
     top: 0;
