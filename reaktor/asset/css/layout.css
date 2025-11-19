@@ -4,7 +4,7 @@
 
 #header {
     position: fixed;
-    z-index: 3;
+    z-index: 50;
     max-width: 100vw;
     height: 116px;
     inset: 0% 0% auto;
