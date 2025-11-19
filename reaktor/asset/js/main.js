@@ -1,32 +1,52 @@
-
 const lenis = new Lenis();
 lenis.on('scroll', ScrollTrigger.update);
+
+let lenisActive = true; // Lenis 루프 활성 여부
+
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+  if (lenisActive) {
+    lenis.raf(time * 1000); // lenisActive가 true일 때만 스크롤 처리
+  }
 });
+
 gsap.ticker.lagSmoothing(0);
 
+// $('#header .btn-menu').click(function(e){
+//       e.preventDefault();
 
-$('#header .btn-menu').click(function(e){
-      e.preventDefault();
+//       $('#header .side-menu').addClass('show');
+//       $(this).css('display', 'none');
+//       $('#header .btn-close').css('display', 'flex');
+//       $('#header .header-wrap').addClass('show');
+//       $('body').addClass('scroll-hide');
+// });
 
-      $('#header .side-menu').addClass('show');
-      $(this).css('display', 'none');
-      $('#header .btn-close').css('display', 'flex');
-      $('#header .header-wrap').addClass('show');
-      $('body').addClass('scroll-hide');
+// $('#header .btn-close').click(function(e){
+//     e.preventDefault();
+
+
+//       $('#header .side-menu').removeClass('show');
+//       $(this).css('display', 'none');
+//       $('#header .btn-menu').css('display', 'flex');
+//       $('#header .header-wrap').removeClass('show');
+//       $('body').removeClass('scroll-hide');
+// });
+$('#header .btn-menu').click(function(){
+  lenisActive = false;      // 스크롤 멈춤
+  $('body').addClass('scroll-hide');
+  $('#header .side-menu').addClass('show');
+  $(this).hide();
+  $('#header .btn-close').show();
 });
 
-$('#header .btn-close').click(function(e){
-    e.preventDefault();
-
-
-      $('#header .side-menu').removeClass('show');
-      $(this).css('display', 'none');
-      $('#header .btn-menu').css('display', 'flex');
-      $('#header .header-wrap').removeClass('show');
-      $('body').removeClass('scroll-hide');
+$('#header .btn-close').click(function(){
+  lenisActive = true;       // 스크롤 재개
+  $('body').removeClass('scroll-hide');
+  $('#header .side-menu').removeClass('show');
+  $(this).hide();
+  $('#header .btn-menu').show();
 });
+
 
 
 ScrollTrigger.create({
