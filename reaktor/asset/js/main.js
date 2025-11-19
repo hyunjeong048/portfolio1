@@ -32,7 +32,8 @@ gsap.ticker.lagSmoothing(0);
 //       $('body').removeClass('scroll-hide');
 // });
 $('#header .btn-menu').click(function(){
-  lenisActive = false;      // 스크롤 멈춤
+   lenisActive = false;       // Lenis raf 루프 중지
+   lenis.stop();              // 💡 Lenis 스크롤 이벤트 처리 정지 (추가)
   $('body').addClass('scroll-hide');
   $('#header .side-menu').addClass('show');
   $(this).hide();
@@ -40,7 +41,8 @@ $('#header .btn-menu').click(function(){
 });
 
 $('#header .btn-close').click(function(){
-  lenisActive = true;       // 스크롤 재개
+   lenisActive = true;      
+   lenis.start();
   $('body').removeClass('scroll-hide');
   $('#header .side-menu').removeClass('show');
   $(this).hide();
