@@ -265,7 +265,23 @@
     right: 0;
 }
 .group-bottom .brand-wrap a{}
-
+.btn-top{
+    width: 34px;
+    height: 34px;
+    position: fixed;
+    bottom: 98px;
+    left: 50%;
+    transform: translate(-50%, 100vh);
+    opacity: 1;
+    margin-left: 600px;
+    transition: 1s;
+    background-image: url(../images/btn-top.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.btn-top.on{
+    transform: translateY(0);
+}
 #footer{}
 #footer .group-link{
     padding: 15px 0;
@@ -344,22 +360,3 @@
 #footer .group-addr .mark{}
 #footer .group-addr .mark a{}
 
-.btn-top{
-    width: 34px;
-    height: 34px;
-    position: fixed;
-    bottom: 98px;
-    left: 50%;
-    transform: translate(-50%, 100vh);
-    opacity: 1;
-    margin-left: 600px;
-    transition: 1s;
-    background-image: url(../images/btn-top.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.btn-top.on{
-    transform: translateY(0);
-}
-.btn-top img{}
