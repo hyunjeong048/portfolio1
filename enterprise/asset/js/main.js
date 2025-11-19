@@ -398,8 +398,6 @@ service4.from('#service4 .right p', {
 }, 'a');
 
 
-
-
 gsap.to('.sc-global',{
     scrollTrigger:{
         trigger:".sc-global",
