@@ -1,14 +1,14 @@
 
-
-
 $('.lang-wrap .btn-go').click(function (e) { 
   e.preventDefault();
 
   url=$('#lang').val()
-
   window.open(url)
-  
 });
+
+ $('.weather-close').click(function(){
+    $('.weather-bg').addClass('hide');
+  })
 
 
 $('.sc-visual .title').click(function(e){
@@ -94,13 +94,6 @@ $('.citizen .autoplay').click(function(){
 })
 
 
-
-
-
-
-
-
-
 var swiper = new Swiper("#tab1", {
       navigation: {
         nextEl: ".next",
@@ -119,7 +112,6 @@ var swiper = new Swiper("#tab1", {
     });
 
 
-
     var bannerSlide = new Swiper(".sc-slide .swiper", {
       slidesPerView:3,
       spaceBetween:43,
@@ -133,13 +125,7 @@ var swiper = new Swiper("#tab1", {
       },
     });
 
-
-
-
-    $('.weather-close').click(function(){
-    $('.weather-bg').addClass('hide');
-})
-
+   
     $('.tab-nav a').click(function(e){
       e.preventDefault();
 
