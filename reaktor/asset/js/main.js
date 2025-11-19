@@ -11,19 +11,13 @@ $('#header .btn-menu').click(function(e){
       e.preventDefault();
 
       $('#header .side-menu').addClass('show');
-      $(this).css('display', 'none');
-      // $('#header .btn-close').css('display', 'flex');
       $('#header .header-wrap').addClass('show');
       $('body').addClass('scroll-hide');
 });
 
 $('#header .btn-close').click(function(e){
-    e.preventDefault();
-
-
+      e.preventDefault();
       $('#header .side-menu').removeClass('show');
-      $(this).css('display', 'none');
-      // $('#header .btn-menu').css('display', 'flex');
       $('#header .header-wrap').removeClass('show');
       $('body').removeClass('scroll-hide');
 });
