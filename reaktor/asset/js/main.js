@@ -7,7 +7,6 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
-
 $('#header .btn-menu').click(function(e){
       e.preventDefault();
 
@@ -31,7 +30,7 @@ $('#header .btn-close').click(function(e){
 ScrollTrigger.create({
    trigger: ".sc-visual2",
    start: "30% 0%",
-   endTrigger: ".sc-link .group-bottom .sticky2",
+   endTrigger: ".sc-link .group-bottom",
    end: "100% 100%",
    // markers: true,
    toggleClass: {
