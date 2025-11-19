@@ -61,7 +61,6 @@ ScrollTrigger.create({
       $("#header").removeClass("active").addClass("hide");
    },
    onLeave: () => {
-   
       $("#header").addClass("active").removeClass("hide");
    },
    onEnterBack: () => {
@@ -82,24 +81,26 @@ var swiper = new Swiper(".sc-visual .main-slide", {
    pagination: false,
 });
 
+
+function updateVisualState(index) {
+   $('.sc-visual .side-item').removeClass('show')
+                              .find('.text, .control').removeClass('show');
+
+   $('.sc-visual .side-item').eq(index).addClass('show')
+                              .find('.text, .control').addClass('show');
+}
+
 $('.sc-visual .side-item').on('click', function(e){
    e.preventDefault();
    let index = $(this).index();
 
    swiper.slideToLoop(index); 
-   $('.sc-visual .side-item').removeClass('show')
-                           .find('.text, .control').removeClass('show');
-   $(this).addClass('show')
-         .find('.text, .control').addClass('show');
+   updateVisualState(index);
 });
 
 swiper.on('slideChange', function() {
    let realIndex = swiper.realIndex;
-
-   $('.sc-visual .side-item').removeClass('show')
-                           .find('.text, .control').removeClass('show');
-   $('.sc-visual .side-item').eq(realIndex).addClass('show')
-                           .find('.text, .control').addClass('show');
+   updateVisualState(realIndex);
 });
 
 
@@ -366,9 +367,6 @@ residential11
 })
 
 
-
-
-
 ScrollTrigger.matchMedia({
    "(min-width: 992px)": function() {
 
@@ -573,7 +571,6 @@ photo11
 })
 
 
-
 gsap.to('.sc-team .group-team .num-area', {
       scrollTrigger: {
          trigger: ".sc-team",
@@ -584,9 +581,6 @@ gsap.to('.sc-team .group-team .num-area', {
       },
       x: "-100%",
 })
-
-
-
 
 
 up1= gsap.to('.btn-link .icon-go img',.3, {
@@ -718,6 +712,6 @@ $('.sc-type .type-item a').on('mouseleave', function() {
    $originalImgs.css({
       'transform': 'scale(0)',
       'transition': 'transform 0.3s ease'
-    });
+   });
 });
 
