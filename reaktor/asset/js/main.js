@@ -7,25 +7,65 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
-$('#header .btn-menu').click(function(e){
-      e.preventDefault();
+// $('#header .btn-menu').click(function(e){
+//       e.preventDefault();
 
-      $('#header .side-menu').addClass('show');
-      $(this).css('display', 'none');
-      $('#header .btn-close').css('display', 'flex');
-      $('#header .header-wrap').addClass('show');
-      $('body').addClass('scroll-hide');
+//       $('#header .side-menu').addClass('show');
+//       $(this).css('display', 'none');
+//       $('#header .btn-close').css('display', 'flex');
+//       $('#header .header-wrap').addClass('show');
+//       $('body').addClass('scroll-hide');
+// });
+
+// $('#header .btn-close').click(function(e){
+//     e.preventDefault();
+
+
+//       $('#header .side-menu').removeClass('show');
+//       $(this).css('display', 'none');
+//       $('#header .btn-menu').css('display', 'flex');
+//       $('#header .header-wrap').removeClass('show');
+//       $('body').removeClass('scroll-hide');
+// });
+// Lenis 초기화 (가정)
+const lenis = new Lenis({
+    // Lenis 설정...
 });
 
+// ...
+
+// 햄버거 메뉴 열기
+$('#header .btn-menu').click(function(e){
+    e.preventDefault();
+
+    // 기존 UI 로직
+    $('#header .side-menu').addClass('show');
+    $(this).css('display', 'none');
+    $('#header .btn-close').css('display', 'flex');
+    $('#header .header-wrap').addClass('show');
+    
+    // 💡 Lenis 스크롤 정지 (가장 확실한 방법)
+    if (typeof lenis !== 'undefined') {
+        lenis.stop();
+    }
+    // $('body').addClass('scroll-hide'); // 이 라인은 제거하거나 유지해도 무방하나, Lenis stop이 우선
+});
+
+// 햄버거 메뉴 닫기
 $('#header .btn-close').click(function(e){
     e.preventDefault();
 
-
-      $('#header .side-menu').removeClass('show');
-      $(this).css('display', 'none');
-      $('#header .btn-menu').css('display', 'flex');
-      $('#header .header-wrap').removeClass('show');
-      $('body').removeClass('scroll-hide');
+    // 기존 UI 로직
+    $('#header .side-menu').removeClass('show');
+    $(this).css('display', 'none');
+    $('#header .btn-menu').css('display', 'flex');
+    $('#header .header-wrap').removeClass('show');
+    
+    // 💡 Lenis 스크롤 다시 시작
+    if (typeof lenis !== 'undefined') {
+        lenis.start();
+    }
+    // $('body').removeClass('scroll-hide'); // 이 라인은 제거하거나 유지해도 무방하나, Lenis start가 우선
 });
 
 
