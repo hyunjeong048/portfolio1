@@ -354,16 +354,8 @@
     opacity: 1;
     margin-left: 600px;
     transition: 1s;
-    
-}
-.btn-top::before{
-    display: block;
-    width: 34px;
-    height: 34px;
     background-image: url(../images/btn-top.png);
-    background-size: cover;
     background-repeat: no-repeat;
-    content: '';
 }
 .btn-top.on{
     transform: translateY(0);
