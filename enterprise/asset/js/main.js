@@ -372,7 +372,6 @@ service3
     })
 
 
-
 const service4 = gsap.timeline({
   scrollTrigger: {
     trigger: "#service4",
@@ -397,6 +396,7 @@ service4.from('#service4 .right p', {
   duration: 1,
   ease: "power2.out"
 }, 'a');
+
 
 
 
@@ -510,9 +510,9 @@ let lastScroll = 0;
 $(window).scroll(function(){
     curr = $(this).scrollTop();
     if(curr> lastScroll){
-        $('.scroll-top').addClass('hide');
+        $('.scroll-top .top-img').addClass('hide');
     }else{
-        $('.scroll-top').removeClass('hide');
+        $('.scroll-top .top-img').removeClass('hide');
     }
     lastScroll = curr;
 })

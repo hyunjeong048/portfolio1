@@ -1083,11 +1083,12 @@
     bottom: 40px;
     z-index: 50;    
     opacity: 0;
-    background-image: url(../images/scroll-top.svg);
-    background-repeat: no-repeat;
+    cursor: pointer;
 }
-.scroll-top::before{
-    content: '';
+.scroll-top.show{
+    opacity: 1;
+}
+.scroll-top .top-img{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1095,10 +1096,9 @@
     height: 50px;
     background-color: #111;
 }
-.scroll-top.show{
-    opacity: 1;
+.scroll-top .top-img.hide{
+    opacity: 0;
 }
-
 @media (max-width:1440px){
     .desc{
         padding-left: 55px;
