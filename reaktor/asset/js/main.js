@@ -23,7 +23,7 @@ $('#header .btn-close').click(function(e){
 
       $('#header .side-menu').removeClass('show');
       $(this).css('display', 'none');
-      $('#header .btn-menu').css('display', 'flex');
+      // $('#header .btn-menu').css('display', 'flex');
       $('#header .header-wrap').removeClass('show');
       $('body').removeClass('scroll-hide');
 });
