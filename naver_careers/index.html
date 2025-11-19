@@ -7,107 +7,113 @@
     <link rel="icon" href="./asset/images/naver_favicon_24.ico" type="image/x-icon">
     <link rel="stylesheet" href="./asset/css/main.css">
     <link rel="stylesheet" href="./asset/css/layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./asset/js/main.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <!-- [S] wrap -->
     <div id="wrap">
+        <!-- [S] header -->
         <header id="header" class="header">
             <h1 class="logo">
-                <a href="" class="link-logo">
+                <a href="#none" class="link-logo">
                     <span class="blind">NAVER Careers</span>
                 </a>
             </h1>
             <nav class="nav-left">
                 <ul class="nav-list">
                     <li class="nav-item first">
-                        <a href="">Teams</a>
+                        <a href="#none">Teams</a>
+                        <!-- [D] .nav-item.first에 호버시 .on 클래스 추가 -->
                         <div class="menu-area">
                             <ul class="menu-list">
-                                <li class="menu-item"><a href="">Tech</a></li>
-                                <li class="menu-item"><a href="">Design</a></li>
-                                <li class="menu-item"><a href="">Service & Business</a></li>
-                                <li class="menu-item"><a href="">Corporate</a></li>
+                                <li class="menu-item"><a href="#none">Tech</a></li>
+                                <li class="menu-item"><a href="#none">Design</a></li>
+                                <li class="menu-item"><a href="#none">Service & Business</a></li>
+                                <li class="menu-item"><a href="#none">Corporate</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="">People</a>
+                        <a href="#none">People</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Benefits</a>
+                        <a href="#none">Benefits</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Culture</a>
+                        <a href="#none">Culture</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Value</a>
+                        <a href="#none">Value</a>
                     </li>
                 </ul>
             </nav>
             <nav class="nav-right">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="">Jobs</a></li>
-                    <li class="nav-item"><a href="">Login</a></li>
-                    <li class="nav-item"><a href="">FAQ</a></li>
+                    <li class="nav-item"><a href="#none">Jobs</a></li>
+                    <li class="nav-item"><a href="#none">Login</a></li>
+                    <li class="nav-item"><a href="#none">FAQ</a></li>
                     <li class="nav-item lang">
-                        <a href="">KR <i class="lang-icon"></i></a>
+                        <a href="#none">KR <i class="lang-icon"></i></a>
+                        <!-- [D] .nav-item.lang 클릭시 .on 클래스 추가 -->
                         <div class="lang-list">
-                            <a href="">EN</a>
+                            <a href="#none">EN</a>
                         </div>
                     </li>
                 </ul>
                 <div class="last-box">
+                    <!-- [D] .last-box클릭시 .on 클래스 추가  -->
                     <button class="last">
                         <span class="blind">메뉴아이콘</span>
                     </button>
                 </div>
             </nav>
-
+            <!-- [D] .last-box클릭시 .show 클래스 추가  -->
             <nav class="side-nav">
                 <ul class="side-list">
+                    <!-- [D] .side-item.first클릭 시 .on 클래스 추가 -->
                     <li class="side-item first">
-                        <a href="">Teams
+                        <a href="#none">Teams
                             <i class="down"></i>
                         </a>
                         <ul class="sub-list">
-                            <li class="sub-item"><a href="">Tech</a></li>
-                            <li class="sub-item"><a href="">Design</a></li>
-                            <li class="sub-item"><a href="">Service & Business</a></li>
-                            <li class="sub-item"><a href="">Corporate</a></li>
+                            <li class="sub-item"><a href="#none">Tech</a></li>
+                            <li class="sub-item"><a href="#none">Design</a></li>
+                            <li class="sub-item"><a href="#none">Service & Business</a></li>
+                            <li class="sub-item"><a href="#none">Corporate</a></li>
                         </ul>
                     </li>
-                    <li class="side-item"><a href="">People</a></li>
-                    <li class="side-item"><a href="">Benefits</a></li>
-                    <li class="side-item"><a href="">Culture</a></li>
-                    <li class="side-item"><a href="">Value</a></li>
+                    <li class="side-item"><a href="#none">People</a></li>
+                    <li class="side-item"><a href="#none">Benefits</a></li>
+                    <li class="side-item"><a href="#none">Culture</a></li>
+                    <li class="side-item"><a href="#none">Value</a></li>
                 </ul>
                 <ul class="side-list">
-                    <li class="side-item"><a href="">Jobs</a></li>
-                    <li class="side-item"><a href="">Login</a></li>
-                    <li class="side-item"><a href="">FAQ</a></li>
+                    <li class="side-item"><a href="#none">Jobs</a></li>
+                    <li class="side-item"><a href="#none">Login</a></li>
+                    <li class="side-item"><a href="#none">FAQ</a></li>
                 </ul>
                 <ul class="side-list lang">
-                    <li class="side-item"><a href="">
-                        <span class="text active">KR</span>
+                    <li class="side-item">
+                        <a href="#none">
+                            <span class="text active">KR</span>
                         </a> 
                     </li>
-                    <li class="side-item"><a href="">
-                        <span class="text">EN</span>
+                    <li class="side-item">
+                        <a href="#none">
+                            <!-- [D] .side-item a 클릭시 .active 클래스 추가 -->
+                            <span class="text">EN</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!-- [E] header -->
 
-
-
+        <!-- [S] main -->
         <main id="main">
             <section class="sc-visual">
                 <h2 class="blind">메인 비주얼</h2>
@@ -153,12 +159,12 @@
                     </div>
                     <div class="group-head">
                         <h2 class="title">Teams</h2>
-                        <span class="sub-area">
-                            <p class="text">서로 다른 사람들이 모여 한 방향으로 나아갑니다</p>
-                            <a href="" class="link-more">Learn more</a>
-                        </span>
+                        <div class="sub-area">
+                            <span class="text">서로 다른 사람들이 모여 한 방향으로 나아갑니다</span>
+                            <a href="#none" class="link-more">Learn more</a>
+                        </div>
                     </div>
-                    <form action="" method="get" >
+                    <form method="get" >
                         <div class="group-form">
                             <div class="icon-area">
                                 <i class="search-icon">
@@ -207,7 +213,7 @@
                 <div class="group-search">
                     <ul class="search-list">
                         <li class="search-item">
-                            <a href="">
+                            <a href="#none">
                                 <div class="inner">
                                     <dl class="link-list">
                                         <dt class="link-title">
@@ -220,7 +226,7 @@
                             </a>
                         </li>
                         <li class="search-item">
-                            <a href="">
+                            <a href="#none">
                                 <div class="inner">
                                     <dl class="link-list">
                                         <dt class="link-title">
@@ -233,7 +239,7 @@
                             </a>
                         </li>
                         <li class="search-item">
-                            <a href="">
+                            <a href="#none">
                                 <div class="inner">
                                     <dl class="link-list">
                                         <dt class="link-title">
@@ -246,7 +252,7 @@
                             </a>
                         </li>
                         <li class="search-item">
-                            <a href="">
+                            <a href="#none">
                                 <div class="inner">
                                     <dl class="link-list">
                                         <dt class="link-title">
@@ -260,11 +266,11 @@
                         </li>
                     </ul>
                 </div>
-
+                <!-- [D] btn-search 클릭시 .show 클래스 추가 -->
                 <div class="group-mobile">
                     <div class="search-wrap">
-                        <label for=""><span class="blind">Search Jobs</span></label>
-                        <input class="text" type="text" placeholder="Search Jobs">
+                        <label for="search"><span class="blind">Search Jobs</span></label>
+                        <input id="search" class="text" type="text" placeholder="Search Jobs">
                         <button class="btn-search">
                             <i class="search-icon"><span class="blind">검색 아이콘</span></i>
                         </button>
@@ -278,7 +284,9 @@
                                         <i class="down"></i>
                                         <span class="text">Tech</span>
                                     </button>
+                                    <!-- .btn-more.on 클릭시 .sub-list 토글 -->
                                     <ul class="sub-list">
+                                        <!-- .checkbox.all 체크박스를 클릭하면, 같은 sub-list 안의 모든 .item 체크박스 상태를 동기화 -->
                                         <li class="item checkbox all">
                                             <input type="checkbox" name="tech" id="tech-all">
                                             <label class="text all" for="tech-all">전체</label>
@@ -460,9 +468,11 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- [D] .btn-clear 클릭 시 모든 체크박스 선택 해제 -->
                     <button type="button" class="btn-clear">
                         Clear filters
                     </button>
+                    <!-- [D] .btn-close 클릭시 .sc-search .group-mobile에 .show 클래스 제거 -->
                     <button class="btn-close"><span class="blind">창닫기</span></button>
                 </div>
             </section>
@@ -472,15 +482,15 @@
                         <div class="group-head">
                             <h2 class="title">People</h2>
                             <span class="sub-area">
-                                <p class="text">성장을 위한 가장 확실한 방법은 뛰어난 동요들 사이에 있는 것입니다</p>
-                                <a href="" class="link-more">Learn more</a>
+                                <span class="text">성장을 위한 가장 확실한 방법은 뛰어난 동요들 사이에 있는 것입니다</span>
+                                <a href="#none" class="link-more">Learn more</a>
                             </span>
                         </div>
 
                         <div class="swiper main-slide2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/people1.jpg" alt="정일화님 이미지">
                                         </div>
@@ -496,7 +506,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img"><img src="./asset/images/people2.jpg" alt="장근창님 이미지"></div>
                                         <div class="text">
                                             <p class="title">오아시스를 찾을 때까지</p>
@@ -510,7 +520,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img"><img src="./asset/images/people3.jpg" alt="임주열님 이미지"></div>
                                         <div class="text">
                                             <p class="title">상상이 향하는 목적지</p>
@@ -524,7 +534,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img"><img src="./asset/images/people4.jpg" alt="김병국님 이미지"></div>
                                         <div class="text">
                                             <p class="title">기술의 생명을 지키는 일</p>
@@ -547,16 +557,16 @@
                 
                 <section class="sc-benefits">
                         <div class="group-head">
-                                <h2 class="title">Benefits</h2>
-                                <span class="sub-area">
-                                    <p class="text">네이버의 일하는 문화는 계속 진화합나다</p>
-                                    <a href="" class="link-more">Learn more</a>
-                                </span>
+                            <h2 class="title">Benefits</h2>
+                            <div class="sub-area">
+                                <span class="text">네이버의 일하는 문화는 계속 진화합나다</span>
+                                <a href="#none" class="link-more">Learn more</a>
+                            </div>
                         </div>
                         <div class="swiper main-slide3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit1.png" alt="Financial Wellbeing">
                                         </div>
@@ -569,7 +579,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit2.png" alt="Time & Refreshg">
                                         </div>
@@ -583,7 +593,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit3.png" alt="Work Space">
                                         </div>
@@ -596,7 +606,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit4.png" alt="Work Tools">
                                         </div>
@@ -607,7 +617,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit1.png" alt="Financial Wellbeing">
                                         </div>
@@ -620,7 +630,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit2.png" alt="Time & Refreshg">
                                         </div>
@@ -634,7 +644,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit3.png" alt="Work Space">
                                         </div>
@@ -647,7 +657,7 @@
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="">
+                                    <a href="#none">
                                         <div class="img">
                                             <img src="./asset/images/benefit4.png" alt="Work Tools">
                                         </div>
@@ -666,7 +676,7 @@
                 </section>
                 <section class="sc-support">
                     <h3 class="title">Board the Navership</h3>
-                    <a href="" class="link-support">
+                    <a href="#none" class="link-support">
                         <span class="text">지원하기</span>
                         <i class="link-go"><span class="blind">지원하기 링크 바로가기</span></i>
                     </a>
@@ -674,36 +684,43 @@
             </div>
             </div>
         </main>
+        <!-- [E] main -->
 
+        <!-- [S] footer -->
         <footer id="footer">
             <div class="footer-inner">
                 <h2 class="blind">네이버커리어 푸터</h2>
                 <div class="group-logo">
-                    <h3 class="logo"><a href="">© NAVER Corp.</a></h3>
-                    <p class="policy"><a href="">개인정보 처리방침</a></p>
+                    <h3 class="logo"><a href="#none">© NAVER Corp.</a></h3>
+                    <p class="policy"><a href="#none">개인정보 처리방침</a></p>
                 </div>
                 <div class="footer-link">
+                    <!-- [D] .btn-link 클릭 시 .active 클래스 추가  -->
                     <button class="btn-link">
                         관련사이트
                     </button>
+                    
+                    <!-- [D] .btn-link 클릭 시 .link-list에 .on 클래스 추가  -->
                     <ul class="link-list">
-                        <li class="link-item"><a href="">NAVERfficial</a></li>
-                        <li class="link-item"><a href="">NAVER DIARY</a></li>
-                        <li class="link-item"><a href="">PLAY NAVER</a></li>
-                        <li class="link-item"><a href="">CH. TECH</a></li>
-                        <li class="link-item"><a href="">NAVER D2</a></li>
+                        <li class="link-item"><a href="#none">NAVERfficial</a></li>
+                        <li class="link-item"><a href="#none">NAVER DIARY</a></li>
+                        <li class="link-item"><a href="#none">PLAY NAVER</a></li>
+                        <li class="link-item"><a href="#none">CH. TECH</a></li>
+                        <li class="link-item"><a href="#none">NAVER D2</a></li>
                     </ul>
                 </div>
                 <ul class="site-list">
-                    <li class="site-item"><a href="">NAVER Cloud</a></li>
-                    <li class="site-item"><a href="">SNOW</a></li>
-                    <li class="site-item"><a href="">NAVER LABS</a></li>
-                    <li class="site-item"><a href="">NAVER WEBTOON</a></li>
-                    <li class="site-item"><a href="">NAVER FINANCIAL</a></li>
-                    <li class="site-item"><a href="">NAVER I&S</a></li>
+                    <li class="site-item"><a href="#none">NAVER Cloud</a></li>
+                    <li class="site-item"><a href="#none">SNOW</a></li>
+                    <li class="site-item"><a href="#none">NAVER LABS</a></li>
+                    <li class="site-item"><a href="#none">NAVER WEBTOON</a></li>
+                    <li class="site-item"><a href="#none">NAVER FINANCIAL</a></li>
+                    <li class="site-item"><a href="#none">NAVER I&S</a></li>
                 </ul>
             </div>
         </footer>
+        <!-- [E] footer -->
     </div>
+    <!-- [E] wrap -->
 </body>
 </html>
