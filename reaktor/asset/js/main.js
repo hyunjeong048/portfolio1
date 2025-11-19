@@ -28,10 +28,6 @@ gsap.ticker.lagSmoothing(0);
 //       $('body').removeClass('scroll-hide');
 // });
 
-// Lenis 인스턴스 생성 시
-const lenis = new Lenis({
-  // 기존 옵션
-});
 
 // 메뉴 열 때 스크롤 비활성화
 $('#header .btn-menu').click(function(e){
