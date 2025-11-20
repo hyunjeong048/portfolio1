@@ -38,6 +38,33 @@ ScrollTrigger.create({
     },
 })
 
+// let Scroll = 0;
+// let menuOpen = false;
+
+// $(window).on('scroll', function(){
+//    if ($('.sc-team .modal-item.show').length > 0 || menuOpen) return;
+
+//     let curr = $(this).scrollTop();
+//     if(curr > Scroll){
+//         $('#header').addClass('hide');
+//     } else {
+//         $('#header').removeClass('hide');
+//     }
+//     Scroll = curr;
+// });
+
+// $('.sc-team .team-item').click(function(){
+//     $(this).find('.modal-item').addClass('show');
+//     $('body').addClass('scroll-hide');
+//     lenis.stop();
+// });
+
+// $(document).on('click', '.sc-team .modal-item .btn-close', function(){
+//     $(this).closest('.modal-item').removeClass('show');
+//     $('body').removeClass('scroll-hide');
+//     lenis.start();
+// });
+
 let Scroll = 0;
 let menuOpen = false;
 
@@ -57,18 +84,17 @@ $('.sc-team .team-item').click(function(){
     $(this).find('.modal-item').addClass('show');
     $('body').addClass('scroll-hide');
     lenis.stop();
+    
+    $('#header').addClass('hide'); 
 });
 
 $(document).on('click', '.sc-team .modal-item .btn-close', function(){
     $(this).closest('.modal-item').removeClass('show');
     $('body').removeClass('scroll-hide');
     lenis.start();
+
+    $('#header').removeClass('hide'); 
 });
-// $('.sc-team .modal-item .btn-close').click(function(){
-//     $(this).closest('.modal-item').removeClass('show');
-//     $('body').removeClass('scroll-hide');
-//     lenis.start();
-// });
 
 
 $('#header .group-nav .btn-menu').click(function(e){
@@ -256,21 +282,6 @@ quote1
     duration: 1,
     stagger: 0.15,
 })
-
-
-
-// $('.sc-team .team-item').click(function(){ 
-//     $(this).find('.modal-item').addClass('show');
-//     $('body').addClass('scroll-hide');
-//     $('#header').addClass('hide');
-// });
-
-// $('.sc-team .modal-item .btn-close').click(function(e){
-//     e.stopPropagation();
-//     $(this).closest('.modal-item').removeClass('show');
-//     $('body').removeClass('scroll-hide');
-// });
-
 
 
 gsap.defaults({
