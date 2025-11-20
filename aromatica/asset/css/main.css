@@ -1117,6 +1117,11 @@
     z-index: 100;
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.sc-team .modal-item::-webkit-scrollbar {
+    display: none;
 }
 .sc-team .modal-item.show{
     display: flex;
