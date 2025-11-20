@@ -94,8 +94,6 @@
 }
 #header .btn-menu{
     display: none;
-    gap: 24px;
-    align-items: center;
     height: 32px;
     color: #fff;
 }
