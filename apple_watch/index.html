@@ -515,10 +515,10 @@
                             <a href="#none">Support</a>
                         </li>
                     </ul>
-                   
                 </div>
             </div>
 
+            <!-- [D] .btn-open .icon 클릭시 .sub-menu에 .open 클래스 토글-->
             <nav class="sub-menu">
                 <div class="sub-wrapper">
                     <div class="sub-bg"></div>
@@ -527,6 +527,7 @@
                             <a href="#none">Apple Watch Series 11</a>
                         </h2>
                         <div class="sub-cont">
+                            <!-- [D] .btn-open .icon클릭시 .sub-cont .tray에 .on 클래스 토글-->
                             <div class="tray">
                                 <ul class="tray-list">
                                     <li class="tray-item"><span class="first">Overview</span></li>
@@ -575,13 +576,14 @@
         <main id="main">
             <section class="sc-visual">
                 <div class="video">
+                     <!-- [D] .btn에 .play 클래스가 있으면 비디오 일시정지 -->
+                    <button class="btn"></button>
                     <video src="https://www.apple.com/105/media/us/apple-watch-series-11/2025/cb7dae4b-d675-49db-8fe3-d4f635c1a345/anim/hero/large.mp4" muted autoplay playsinline loop></video>
                     <img src="./asset/images/visual(2).jpg" alt="메인비주얼 이미지">
                 </div>
                 <div class="video-control">
-                    <button class="btn">
-                        
-                    </button>
+                    <!-- [D] .btn 클릭시 .play 클래스 토글 -->
+                    <button class="btn"></button>
                 </div>
                 <div class="group-text">
                     <div class="dimmed"></div>
@@ -681,6 +683,7 @@
                         <div class="control-wrapper">
                             <div class="control1">
                                 <ul class="progress-indicators">
+                                    <!-- [D] 슬라이드 인덱스와 컨트롤 연동/ li 클릭 시 해당 슬라이드 재생 -->
                                     <li><span class="fill"></span></li>
                                     <li><span class="fill"></span></li>
                                     <li><span class="fill"></span></li>
@@ -688,6 +691,7 @@
                                     <li><span class="fill"></span></li>
                                     <li><span class="fill"></span></li>
                                 </ul>
+                                <!-- [D] .btn-video 클릭시 .play 클래스 토글  -->
                                 <div class="btn-video"></div>
                             </div>
                         </div>
@@ -749,6 +753,7 @@
                         </div>
                     </div>
                     <ul class="control-list">
+                        <!-- [D] .control-item 클릭시 .active 클래스 추가 -->
                         <li class="control-item">
                             <button class="control-btn first">
                                 <span class="text">
@@ -902,12 +907,14 @@
                         </li>
                     </ul>
                     <div class="control">
+                        <!-- [D] 아이템이 열리면 .btn.prev에 .show 클래스 추가 -->
                         <button class="btn prev">
                             <span class="blind">이전슬라이드</span>
                             <svg class="icon-control icon-control-chevronup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
                             <path d="m11 20c0-.3838.1465-.7676.4395-1.0605l5.5-5.5c.5854-.5859 1.5356-.5859 2.1211 0l5.5 5.5c.5859.5859.5859 1.5352 0 2.1211-.5854.5859-1.5356.5859-2.1211 0l-4.4395-4.4395-4.4395 4.4395c-.5854.5859-1.5356.5859-2.1211 0-.293-.293-.4395-.6768-.4395-1.0605z"></path>
                             </svg>
                         </button>
+                        <!-- [D] 아이템이 열리면 .show 클래스 추가 -->
                         <button class="btn next">
                             <span class="blind">다음슬라이드</span>
                             <svg class="icon-control icon-control-chevrondown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
@@ -915,6 +922,7 @@
                             </svg>
                         </button>
                     </div>
+                    <!-- [D] .btn-close 클릭시 모든 창 닫기  -->
                     <div class="btn-close">
                         <button class="close">
                             <span class="close-icon">
@@ -1185,6 +1193,7 @@
                         <div class="group-intro">
                             <h2 class="sm-headline">Battery</h2>
                         </div>
+                        <!-- [D] 스크롤 시 원형 진행바 애니메이션과 숫자 증가 효과 -->
                         <div class="group-animation">
                             <div class="icon">
                                 <svg width="1800" height="1800" class="progress-ring" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -2014,6 +2023,7 @@
                 <nav class="footer-nav">
                     <ul class="nav-list">
                         <li class="nav-item">
+                            <!-- [D] .hide 클릭 시 .column-list에 .open 클래스 토글 -->
                             <ul class="column-list">
                                 <li class="column-item">
                                     <h3>

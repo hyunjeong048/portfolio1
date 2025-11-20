@@ -4,6 +4,7 @@ $(function() {
 
     $('.nav-item').on('mouseenter', function() {
         const $groupMenu = $(this).children('.group-menu');
+        
         $('.group-menu').not($groupMenu).removeClass('show');
         $groupMenu.addClass('show');
 
@@ -109,7 +110,6 @@ $(document).on('click', '.btn-open .icon', function() {
 });
 
 
-
 $('.sc-visual .video-control .btn').click(function() {
     var $btn = $(this);
     var $video = $('.sc-visual .video video').get(0);
@@ -165,6 +165,7 @@ $(function () {
     $(".btn-video").removeClass("play");
   });
 
+
   $(".btn-video").on("click", function () {
     const $btn = $(this);
     const $currFill = $dots.filter(".curr").find(".fill");
@@ -176,7 +177,7 @@ $(function () {
       
       const Duration = delay * (1 - (currentWidth / 100)); 
       $currFill.animate({ width: "100%" }, 
-        Duration, "linear");
+      Duration, "linear");
       $btn.removeClass("play");
       
     } else {
@@ -192,7 +193,7 @@ const product1 = gsap.timeline({
     scrollTrigger:{
         trigger:".sc-product",
         start:"0% 90%",
-        // end:"20% 20%",
+        end:"20% 20%",
         // markers:true,
     }
 })
@@ -245,7 +246,7 @@ $(function(){
 
     $videos.removeClass('active').find('video').each(function() {
       this.pause();
-      this.currentTime = 0;
+      // this.currentTime = 0;
     });
     $video.addClass('active');
     const vid = $video.find('video').get(0);
@@ -259,6 +260,7 @@ $(function(){
 
   function closeAll() {
     $items.removeClass('active').find('.cont').removeClass('show');
+
     $videos.removeClass('active').find('video').each(function() {
       this.pause();
       this.currentTime = 0;
