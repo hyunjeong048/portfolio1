@@ -52,13 +52,16 @@ $(window).on('scroll', function(){
     }
     Scroll = curr;
 });
+
 $('.sc-team .team-item').click(function(){
     $(this).find('.modal-item').addClass('show');
+    $('body').addClass('scroll-hide');
     lenis.stop();
 });
 
 $('.sc-team .modal-item .btn-close').click(function(){
     $(this).closest('.modal-item').removeClass('show');
+    $('body').removeClass('scroll-hide');
     lenis.start();
 });
 
@@ -109,7 +112,6 @@ about1
 })
 
 
-
 gsap.to('.sc-story .story-title .text',{
     scrollTrigger:{
         trigger:".sc-story .story-title",
@@ -123,8 +125,6 @@ gsap.to('.sc-story .story-title .text',{
 })
 
 
-
-
 gsap.to('.sc-enjoy .head-area .title-color',{
     scrollTrigger:{
         trigger:".sc-enjoy",
@@ -136,8 +136,6 @@ gsap.to('.sc-enjoy .head-area .title-color',{
     },
     color: "rgb(244, 147, 32)"  
 })
-
-
 
 
 const routine1 = gsap.timeline({
@@ -256,17 +254,17 @@ quote1
 
 
 
-$('.sc-team .team-item').click(function(){ 
-    $(this).find('.modal-item').addClass('show');
-    $('body').addClass('scroll-hide');
-    $('#header').addClass('hide');
-});
+// $('.sc-team .team-item').click(function(){ 
+//     $(this).find('.modal-item').addClass('show');
+//     $('body').addClass('scroll-hide');
+//     $('#header').addClass('hide');
+// });
 
-$('.sc-team .modal-item .btn-close').click(function(e){
-    e.stopPropagation();
-    $(this).closest('.modal-item').removeClass('show');
-    $('body').removeClass('scroll-hide');
-});
+// $('.sc-team .modal-item .btn-close').click(function(e){
+//     e.stopPropagation();
+//     $(this).closest('.modal-item').removeClass('show');
+//     $('body').removeClass('scroll-hide');
+// });
 
 
 
