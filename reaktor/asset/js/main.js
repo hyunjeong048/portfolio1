@@ -12,14 +12,11 @@ $('#header .btn-menu').click(function(e){
 
       $('#header .side-menu').addClass('show');
       $('#header .header-wrap').addClass('show');
-      $('body').addClass('scroll-hide');
 });
-
 $('#header .btn-close').click(function(e){
       e.preventDefault();
       $('#header .side-menu').removeClass('show');
       $('#header .header-wrap').removeClass('show');
-      $('body').removeClass('scroll-hide');
 });
 
 
