@@ -11,14 +11,11 @@ $('#header .btn-menu').click(function(e){
       e.preventDefault();
 
       $('#header .side-wrap').addClass('show');
-      $('#header .header-wrap').addClass('show');
 });
 
 $('#header .btn-close').click(function(e){
       e.preventDefault();
-
       $('#header .side-wrap').removeClass('show');
-      $('#header .header-wrap').removeClass('show');
 });
 
 
