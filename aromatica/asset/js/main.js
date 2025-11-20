@@ -59,11 +59,16 @@ $('.sc-team .team-item').click(function(){
     lenis.stop();
 });
 
-$('.sc-team .modal-item .btn-close').click(function(){
+$(document).on('click', '.sc-team .modal-item .btn-close', function(){
     $(this).closest('.modal-item').removeClass('show');
     $('body').removeClass('scroll-hide');
     lenis.start();
 });
+// $('.sc-team .modal-item .btn-close').click(function(){
+//     $(this).closest('.modal-item').removeClass('show');
+//     $('body').removeClass('scroll-hide');
+//     lenis.start();
+// });
 
 
 $('#header .group-nav .btn-menu').click(function(e){
