@@ -105,7 +105,7 @@
                     <li class="menu-item">
                         <div class="menu-title">
                             <strong><a href="#none">회사소개</a></strong>
-                            <button class="down">
+                            <button class="down" aria-label="회사소개 하위 메뉴 열기">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M18.71 9.557l-6.003 6.01a1 1 0 01-1.415 0L5.29 9.556 6.705 8.14 12 13.44l5.295-5.3 1.415 1.417z" fill="#000"></path></svg>
                             </button>
                         </div>
@@ -118,7 +118,7 @@
                     <li class="menu-item">
                         <div class="menu-title">
                             <strong><a href="#none">서비스</a></strong>
-                            <button class="down">
+                            <button class="down" aria-label="서비스 하위 메뉴 열기">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M18.71 9.557l-6.003 6.01a1 1 0 01-1.415 0L5.29 9.556 6.705 8.14 12 13.44l5.295-5.3 1.415 1.417z" fill="#000"></path></svg>
                             </button>
                         </div>
@@ -132,7 +132,7 @@
                     <li class="menu-item">
                         <div class="menu-title">
                             <strong><a href="#none">지속가능경영</a></strong>
-                            <button class="down">
+                            <button class="down" aria-label="지속가능경영 하위 메뉴 열기">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M18.71 9.557l-6.003 6.01a1 1 0 01-1.415 0L5.29 9.556 6.705 8.14 12 13.44l5.295-5.3 1.415 1.417z" fill="#000"></path></svg>
                             </button>
                         </div>
@@ -145,7 +145,7 @@
                     <li class="menu-item">
                         <div class="menu-title">
                             <strong><a href="#none">뉴스룸</a></strong>
-                            <button class="down">
+                            <button class="down" aria-label="뉴스룸 하위 메뉴 열기">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M18.71 9.557l-6.003 6.01a1 1 0 01-1.415 0L5.29 9.556 6.705 8.14 12 13.44l5.295-5.3 1.415 1.417z" fill="#000"></path></svg>
                             </button>
                         </div>
@@ -260,32 +260,32 @@
                 </div>
             </section>
 
-                <section class="sc-service">
-                    <h2 class="headline">
-                        <strong>세상 모든 것이 식지 않도록</strong>
-                        <span>음식 배달, 장보기 쇼핑, 로봇까지 <br>
-                            우아한형제들이 가장 앞서 달립니다</span>
-                    </h2>
-                    <div class="group-video">
-                        <div class="video-area">
-                            <!-- [D] .btn-control 클릭으로 비디오 일시정지/재생 제어-->
-                            <!-- [D] play시 비디오 처음부터 재생-->
-                            <video autoplay  muted="muted" loop="loop" playsinline poster="https://woowahan-cdn.woowahan.com/static/image/main/main_baemin.ver2_0_1.jpg?d35c1cec">
-                                <source src="https://woowahan-cdn.woowahan.com/static/media/main_baemin.11a5ba9f.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="control-area">
-                            <!-- [D] .btn-control 클릭시 .on 클래스 추가-->
-                            <button class="btn-control">
-                                <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="80" height="80" rx="20" fill="#000" fill-opacity=".5"></rect>
-                                    <path class="pause" fill="#fff" d="M26 24h8v32h-8zM46 24h8v32h-8z"></path>
-                                    <path class="play" fill="#fff" d="M56 40.32L30 57.642V23l26 17.32z"></path>
-                                </svg>
-                            </button>
-                        </div>
+            <section class="sc-service">
+                <h2 class="headline">
+                    <strong>세상 모든 것이 식지 않도록</strong>
+                    <span>음식 배달, 장보기 쇼핑, 로봇까지 <br>
+                        우아한형제들이 가장 앞서 달립니다</span>
+                </h2>
+                <div class="group-video">
+                    <div class="video-area">
+                        <!-- [D] .btn-control 클릭으로 비디오 일시정지/재생 제어-->
+                        <!-- [D] play시 비디오 처음부터 재생-->
+                        <video autoplay muted="muted" loop="loop" playsinline poster="https://woowahan-cdn.woowahan.com/static/image/main/main_baemin.ver2_0_1.jpg?d35c1cec">
+                            <source src="https://woowahan-cdn.woowahan.com/static/media/main_baemin.11a5ba9f.mp4" type="video/mp4">
+                        </video>
                     </div>
-                </section>
+                    <div class="control-area">
+                        <!-- [D] .btn-control 클릭시 .on 클래스 추가-->
+                        <button class="btn-control" aria-label="비디오 일시정지/재생">
+                            <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="80" height="80" rx="20" fill="#000" fill-opacity=".5"></rect>
+                                <path class="pause" fill="#fff" d="M26 24h8v32h-8zM46 24h8v32h-8z"></path>
+                                <path class="play" fill="#fff" d="M56 40.32L30 57.642V23l26 17.32z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
             <section class="sc-card">
                 <h2 class="headline">
@@ -629,7 +629,7 @@
                 </ul>
             </nav>
             <div class="footer-link">
-                <button class="btn-select">
+                <button class="btn-select" aria-label="관련사이트 메뉴 열기">
                     <span>관련사이트</span>
                     <i>
                     <svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5" stroke-linecap="square"></path></svg>
