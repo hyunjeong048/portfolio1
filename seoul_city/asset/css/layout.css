@@ -347,9 +347,14 @@
 }
 #footer .group-addr .addr-tel .btn-popup{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
 }
-
-#footer .group-addr .addr-tel .btn-popup::after{
+#footer .group-addr .addr-tel .btn-popup::before{
     content: '';
     display: inline-block;
     width: 14px;
