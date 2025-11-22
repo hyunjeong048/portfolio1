@@ -363,7 +363,7 @@
     background-image: url(../images/addr-tel.png);
     background-size: 14px 14px;
 }
-#footer .group-addr .addr-tel .popup{
+#footer .group-addr .popup{
     display: none;
     position: absolute;
     bottom: 26px;
