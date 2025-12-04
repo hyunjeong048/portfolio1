@@ -43,9 +43,6 @@ $('.btn-header').click(function(e){
 
 
 
-
-
-
 var swiper = new Swiper(".sc-visual .main-slide", {
     navigation: {
       nextEl: ".btn.next",
@@ -53,13 +50,12 @@ var swiper = new Swiper(".sc-visual .main-slide", {
     },
     loop: true,
     autoplay:{
-        delay:5000,
+        delay:4000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true 
     },
     on:{
       "init":function() {
-
         pageTag = $('.sc-visual .control .swiper-pagination');
         total=this.slides.length;
         w=pageTag.width();
@@ -114,8 +110,6 @@ $('.sc-service .group-video .btn-control').click(function() {
     $('.sc-service video').get(0).pause();
   }
 });
-
-
 
 
 
