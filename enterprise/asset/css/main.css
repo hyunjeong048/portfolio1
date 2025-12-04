@@ -402,7 +402,7 @@
     background-color: #00bf41;
     transform: translateX(50%);
 }
-.sc-feature .cont::before{
+.sc-feature .cont::after{
     position: absolute;
     top: 1px;
     left: 0;
