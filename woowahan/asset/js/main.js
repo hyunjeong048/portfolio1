@@ -28,6 +28,21 @@ $('.header-menu .down').click(function(){
   $(this).children('svg').toggleClass('rotate');
 })
 
+$('.btn-header').click(function(e){
+    e.preventDefault();
+    if($('#header .header-menu').hasClass('show')){
+      $(this).removeClass('active');
+        $('#header .header-menu').removeClass('show');
+        $('body').removeClass('scroll-hide');
+    }else{
+      $(this).addClass('active');
+      $('#header .header-menu').addClass('show');
+      $('body').addClass('scroll-hide');
+    }
+})
+
+
+
 
 
 
